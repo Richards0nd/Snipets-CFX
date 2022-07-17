@@ -1,19 +1,5 @@
 
 --- ```
---- Possible return values: 0, 1, 2
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA8AE43AEC1A61314)
----@return number
-function LocalizationGetSystemDateFormat() end
-
---- ```
---- Same return values as GET_CURRENT_LANGUAGE
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x497420E022796B3F)
----@return number
-function LocalizationGetSystemLanguage() end
-
---- ```
 --- 0 = american (en-US)
 --- 1 = french (fr-FR)
 --- 2 = german (de-DE)
@@ -31,3 +17,17 @@ function LocalizationGetSystemLanguage() end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x2BDD44CC428A7EAE)
 ---@return number
 function GetCurrentLanguage() end
+
+--- ```
+--- Possible return values: 0, 1, 2
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA8AE43AEC1A61314)
+---@return number
+function LocalizationGetSystemDateFormat() end
+
+--- ```
+--- Same return values as GET_CURRENT_LANGUAGE
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x497420E022796B3F)
+---@return number
+function LocalizationGetSystemLanguage() end

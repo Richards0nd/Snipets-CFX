@@ -13,6 +13,22 @@
 function ClearPopscheduleOverrideVehicleModel(scheduleId) end
 
 --- ```
+--- Returns a hash representing which part of the map the given coords are located.  
+--- Possible return values:  
+--- (Hash of) city -> -289320599  
+--- (Hash of) countryside -> 2072609373  
+--- C# Example :  
+--- Ped player = Game.Player.Character;  
+--- Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7EE64D51E8498728)
+---@param x number
+---@param y number
+---@param z number
+---@return any
+function GetHashOfMapAreaAtCoords(x,y,z) end
+
+--- ```
 --- AIRP = Los Santos International Airport  
 --- ALAMO = Alamo Sea  
 --- ALTA = Alta  
@@ -112,6 +128,32 @@ function ClearPopscheduleOverrideVehicleModel(scheduleId) end
 ---@return string
 function GetNameOfZone(x,y,z) end
 
+--- Gets the zone scumminess level, used to calculate the cellphone signal strength.
+--- 
+--- ```cpp
+--- enum eZoneScumminess
+--- {
+---     SCUMMINESS_POSH = 0,
+---     SCUMMINESS_NICE = 1,
+---     SCUMMINESS_ABOVE_AVERAGE = 2,
+---     SCUMMINESS_BELOW_AVERAGE = 3,
+---     SCUMMINESS_CRAP = 4,
+---     SCUMMINESS_SCUM = 5
+--- }
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x5F7B268D15BA0739)
+---@param zoneId number
+---@return number
+function GetZoneScumminess(zoneId) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x27040C25DE6CB2F4)
+---@param x number
+---@param y number
+---@param z number
+---@return number
+function GetZoneAtCoords(x,y,z) end
+
 --- ```
 --- 'zoneName' corresponds to an entry in 'popzone.ipl'.  
 --- AIRP = Los Santos International Airport  
@@ -209,43 +251,17 @@ function GetNameOfZone(x,y,z) end
 ---@return number
 function GetZoneFromNameId(zoneName) end
 
---- ```
---- cellphone range 1- 5 used for signal bar in iFruit phone  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x5F7B268D15BA0739)
----@param zoneId number
----@return number
-function GetZoneScumminess(zoneId) end
-
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x27040C25DE6CB2F4)
----@param x number
----@param y number
----@param z number
----@return number
-function GetZoneAtCoords(x,y,z) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xBA5ECEEA120E5611)
+---@param zoneId number
+---@param toggle boolean
+function SetZoneEnabled(zoneId,toggle) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x4334BC40AA0CB4BB)
 ---@param zoneId number
 ---@return number
 function GetZonePopschedule(zoneId) end
-
---- ```
---- Returns a hash representing which part of the map the given coords are located.  
---- Possible return values:  
---- (Hash of) city -> -289320599  
---- (Hash of) countryside -> 2072609373  
---- C# Example :  
---- Ped player = Game.Player.Character;  
---- Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7EE64D51E8498728)
----@param x number
----@param y number
----@param z number
----@return any
-function GetHashOfMapAreaAtCoords(x,y,z) end
 
 --- ```
 --- Only used once in the decompiled scripts. Seems to be related to scripted vehicle generators.  
@@ -260,9 +276,3 @@ function GetHashOfMapAreaAtCoords(x,y,z) end
 ---@param scheduleId number
 ---@param vehicleHash any
 function OverridePopscheduleVehicleModel(scheduleId,vehicleHash) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xBA5ECEEA120E5611)
----@param zoneId number
----@param toggle boolean
-function SetZoneEnabled(zoneId,toggle) end

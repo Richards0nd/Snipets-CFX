@@ -1,9 +1,4 @@
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x14D8518E9760F08F)
----@param brainSet number
-function DisableScriptBrainSet(brainSet) end
-
 --- ```
 --- BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", ${s_f_y_hooker_01}, 100, 0);
 --- - Nacorpio
@@ -23,8 +18,9 @@ function AddScriptToRandomPed(name,model,p2,p3) end
 function EnableScriptBrainSet(brainSet) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x0B40ED49D7D6FF84)
-function N_0x0b40ed49d7d6ff84() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x14D8518E9760F08F)
+---@param brainSet number
+function DisableScriptBrainSet(brainSet) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xCCBA154209823057)
@@ -33,28 +29,11 @@ function N_0x0b40ed49d7d6ff84() end
 function IsObjectWithinBrainActivationRange(object) end
 
 --- ```
---- Something like flush_all_scripts   
---- Most of time comes after NETWORK_END_TUTORIAL_SESSION() or before TERMINATE_THIS_THREAD()  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4D953DF78EBF8158)
-function N_0x4d953df78ebf8158() end
-
---- ```
 --- Gets whether the world point the calling script is registered to is within desired range of the player.  
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xC5042CC6F5E3D450)
 ---@return boolean
 function IsWorldPointWithinBrainActivationRange() end
-
---- ```
---- Looks like a cousin of above function _6D6840CEE8845831 as it was found among them. Must be similar  
---- Here are possible values of argument -   
---- "ob_tv"  
---- "launcher_Darts"  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6E91B04E08773030)
----@param action string
-function N_0x6e91b04e08773030(action) end
 
 --- ```
 --- Possible values:  
@@ -88,6 +67,27 @@ function N_0x6e91b04e08773030(action) end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x6D6840CEE8845831)
 ---@param action string
 function N_0x6d6840cee8845831(action) end
+
+--- ```
+--- Something like flush_all_scripts   
+--- Most of time comes after NETWORK_END_TUTORIAL_SESSION() or before TERMINATE_THIS_THREAD()  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4D953DF78EBF8158)
+function N_0x4d953df78ebf8158() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x0B40ED49D7D6FF84)
+function N_0x0b40ed49d7d6ff84() end
+
+--- ```
+--- Looks like a cousin of above function _6D6840CEE8845831 as it was found among them. Must be similar  
+--- Here are possible values of argument -   
+--- "ob_tv"  
+--- "launcher_Darts"  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6E91B04E08773030)
+---@param action string
+function N_0x6e91b04e08773030(action) end
 
 --- ```
 --- Registers a script for any object with a specific model hash.

@@ -1,30 +1,4 @@
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x36DD3FE58B5E5212)
----@param x number
----@param y number
----@param z number
----@param explosionType number
----@param explosionFx any
----@param damageScale number
----@param isAudible boolean
----@param isInvisible boolean
----@param cameraShake number
-function AddExplosionWithUserVfx(x,y,z,explosionType,explosionFx,damageScale,isAudible,isInvisible,cameraShake) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x172AA1B624FA1013)
----@param ped number
----@param x number
----@param y number
----@param z number
----@param explosionType number
----@param damageScale number
----@param isAudible boolean
----@param isInvisible boolean
----@param cameraShake number
-function AddOwnedExplosion(ped,x,y,z,explosionType,damageScale,isAudible,isInvisible,cameraShake) end
-
 --- ```
 --- NativeDB Added Parameter 9: BOOL noDamage
 --- ```
@@ -136,6 +110,30 @@ function AddOwnedExplosion(ped,x,y,z,explosionType,damageScale,isAudible,isInvis
 function AddExplosion(x,y,z,explosionType,damageScale,isAudible,isInvisible,cameraShake) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x36DD3FE58B5E5212)
+---@param x number
+---@param y number
+---@param z number
+---@param explosionType number
+---@param explosionFx any
+---@param damageScale number
+---@param isAudible boolean
+---@param isInvisible boolean
+---@param cameraShake number
+function AddExplosionWithUserVfx(x,y,z,explosionType,explosionFx,damageScale,isAudible,isInvisible,cameraShake) end
+
+--- ```
+--- Returns TRUE if it found something. FALSE if not.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x352A9F6BCF90081F)
+---@param outPosition vector3
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
+function GetClosestFirePos(outPosition,x,y,z) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x50CAD495A460B305)
 ---@param x number
 ---@param y number
@@ -143,6 +141,19 @@ function AddExplosion(x,y,z,explosionType,damageScale,isAudible,isInvisible,came
 ---@param radius number
 ---@return number
 function GetNumberOfFiresInRange(x,y,z,radius) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x172AA1B624FA1013)
+---@param ped number
+---@param x number
+---@param y number
+---@param z number
+---@param explosionType number
+---@param damageScale number
+---@param isAudible boolean
+---@param isInvisible boolean
+---@param cameraShake number
+function AddOwnedExplosion(ped,x,y,z,explosionType,damageScale,isAudible,isInvisible,cameraShake) end
 
 --- ```
 --- Returns a handle to the first entity within the a circle spawned inside the 2 points from a radius.
@@ -159,39 +170,6 @@ function GetNumberOfFiresInRange(x,y,z,radius) end
 ---@return number
 function GetEntityInsideExplosionArea(explosionType,x1,y1,z1,x2,y2,z2,radius) end
 
---- ```
---- NativeDB Introduced: v1290
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB3CD51E3DB86F176)
----@param explosionType number
----@param x number
----@param y number
----@param z number
----@param radius number
----@return number
-function GetEntityInsideExplosionSphere(explosionType,x,y,z,radius) end
-
---- ```
---- Returns TRUE if it found something. FALSE if not.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x352A9F6BCF90081F)
----@param outPosition vector3
----@param x number
----@param y number
----@param z number
----@return boolean
-function GetClosestFirePos(outPosition,x,y,z) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xAB0F816885B0E483)
----@param explosionType number
----@param x number
----@param y number
----@param z number
----@param radius number
----@return boolean
-function IsExplosionInSphere(explosionType,x,y,z,radius) end
-
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x6070104B699B2EF4)
 ---@param explosionType number
@@ -203,6 +181,18 @@ function IsExplosionInSphere(explosionType,x,y,z,radius) end
 ---@param z2 number
 ---@return boolean
 function IsExplosionActiveInArea(explosionType,x1,y1,z1,x2,y2,z2) end
+
+--- ```
+--- NativeDB Introduced: v1290
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB3CD51E3DB86F176)
+---@param explosionType number
+---@param x number
+---@param y number
+---@param z number
+---@param radius number
+---@return number
+function GetEntityInsideExplosionSphere(explosionType,x,y,z,radius) end
 
 --- See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA079A6C51525DC4B)
@@ -218,6 +208,16 @@ function IsExplosionActiveInArea(explosionType,x1,y1,z1,x2,y2,z2) end
 function IsExplosionInAngledArea(explosionType,x1,y1,z1,x2,y2,z2,width) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xAB0F816885B0E483)
+---@param explosionType number
+---@param x number
+---@param y number
+---@param z number
+---@param radius number
+---@return boolean
+function IsExplosionInSphere(explosionType,x,y,z,radius) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x2E2EBA0EE7CED0E0)
 ---@param explosionType number
 ---@param x1 number
@@ -229,30 +229,20 @@ function IsExplosionInAngledArea(explosionType,x1,y1,z1,x2,y2,z2,width) end
 ---@return boolean
 function IsExplosionInArea(explosionType,x1,y1,z1,x2,y2,z2) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7FF548385680673F)
----@param fireHandle any
-function RemoveScriptFire(fireHandle) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF6A9D9708F6F23DF)
----@param entity number
----@return any
-function StartEntityFire(entity) end
+--- SET_FIRE_\*
+--- 
+--- ```
+--- NativeDB Introduced: v1734
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8F390AC4155099BA)
+---@param p0 number
+function SetFireSpreadRate(p0) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x28D3FED7190D3A0B)
 ---@param entity number
 ---@return boolean
 function IsEntityOnFire(entity) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x056A8A219B8E829F)
----@param x number
----@param y number
----@param z number
----@param radius number
-function StopFireInRange(x,y,z,radius) end
 
 --- ```
 --- Starts a fire:  
@@ -270,15 +260,25 @@ function StopFireInRange(x,y,z,radius) end
 function StartScriptFire(X,Y,Z,maxChildren,isGasFire) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7FF548385680673F)
+---@param fireHandle any
+function RemoveScriptFire(fireHandle) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF6A9D9708F6F23DF)
+---@param entity number
+---@return any
+function StartEntityFire(entity) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x056A8A219B8E829F)
+---@param x number
+---@param y number
+---@param z number
+---@param radius number
+function StopFireInRange(x,y,z,radius) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x7F0DD2EBBB651AFF)
 ---@param entity number
 function StopEntityFire(entity) end
-
---- SET_FIRE_\*
---- 
---- ```
---- NativeDB Introduced: v1734
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8F390AC4155099BA)
----@param p0 number
-function SetFireSpreadRate(p0) end

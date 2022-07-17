@@ -16,41 +16,16 @@
 function AddNavmeshBlockingObject(x,y,z,width,length,height,heading,p7,p8) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8415D95B194A3AEA)
----@return boolean
-function AreAllNavmeshRegionsLoaded() end
-
---- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x387EAD7EE42F6685)
 ---@param x number
 ---@param y number
 ---@param radius number
 function AddNavmeshRequiredRegion(x,y,radius) end
 
---- Calculates the travel distance between a set of points.
---- Doesn't seem to correlate with distance on gps sometimes.
---- 
---- This function returns the value 100000.0 over long distances, seems to be a failure mode result, potentially occurring when not all path nodes are loaded into pathfind.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xADD95C7005C4A197)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@return number
-function CalculateTravelDistanceBetweenPoints(x1,y1,z1,x2,y2,z2) end
-
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4C8872D8CDBE1B8B)
----@param p0 any
----@param p1 any
----@param p2 any
----@param p3 any
----@param p4 any
----@param p5 any
----@param p6 any
-function DisableNavmeshInArea(p0,p1,p2,p3,p4,p5,p6) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8415D95B194A3AEA)
+---@return boolean
+function AreAllNavmeshRegionsLoaded() end
 
 --- Clears a disabled GPS route area from a certain index previously set using [`SET_GPS_DISABLED_ZONE_AT_INDEX`](#\_0xD0BC1C6FB18EE154).
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x2801D0012266DF07)
@@ -66,18 +41,36 @@ function ClearGpsDisabledZoneAtIndex(index) end
 ---@return boolean
 function AreNodesLoadedForArea(x1,y1,x2,y2) end
 
---- ```
---- Get the closest vehicle node to a given position, unknown1 = 3.0, unknown2 = 0  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2EABE3B06F58C1BE)
----@param x number
----@param y number
----@param z number
----@param outPosition vector3
----@param unknown1 number
----@param unknown2 number
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4C8872D8CDBE1B8B)
+---@param p0 any
+---@param p1 any
+---@param p2 any
+---@param p3 any
+---@param p4 any
+---@param p5 any
+---@param p6 any
+function DisableNavmeshInArea(p0,p1,p2,p3,p4,p5,p6) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x0EAEB0DB4B132399)
+---@param p0 any
 ---@return boolean
-function GetClosestMajorVehicleNode(x,y,z,outPosition,unknown1,unknown2) end
+function DoesNavmeshBlockingObjectExist(p0) end
+
+--- Calculates the travel distance between a set of points.
+--- Doesn't seem to correlate with distance on gps sometimes.
+--- 
+--- This function returns the value 100000.0 over long distances, seems to be a failure mode result, potentially occurring when not all path nodes are loaded into pathfind.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xADD95C7005C4A197)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@return number
+function CalculateTravelDistanceBetweenPoints(x1,y1,z1,x2,y2,z2) end
 
 --- ```
 --- p3 is 0 in the only game script occurrence (trevor3) but 1 doesn't seem to make a difference
@@ -104,57 +97,6 @@ function GetClosestMajorVehicleNode(x,y,z,outPosition,unknown1,unknown2) end
 ---@param distToNxJunction number
 ---@return number
 function GenerateDirectionsToCoord(x,y,z,p3,direction,vehicle,distToNxJunction) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x0EAEB0DB4B132399)
----@param p0 any
----@return boolean
-function DoesNavmeshBlockingObjectExist(p0) end
-
---- ```
---- p1 seems to be always 1.0f in the scripts  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x132F52BBA570FE92)
----@param x number
----@param y number
----@param z number
----@param p3 number
----@param p4 number
----@param p5 vector3
----@param p6 vector3
----@param p7 any
----@param p8 any
----@param p9 number
----@param p10 boolean
----@return any
-function GetClosestRoad(x,y,z,p3,p4,p5,p6,p7,p8,p9,p10) end
-
---- ```
---- FYI: When falling through the map (or however you got under it) you will respawn when your player ped's height is <= -200.0 meters (I think you all know this) and when in a vehicle you will actually respawn at the closest vehicle node.
---- ----------
---- Vector3 nodePos;
---- GET_CLOSEST_VEHICLE_NODE(x,y,z,&nodePos,...)
---- p4 is either 0, 1 or 8. 1 means any path/road. 0 means node in the middle of the closest main (asphalt) road.
---- p5, p6 are always the same:
---- 0x40400000 (3.0), 0
---- p5 can also be 100.0 and p6 can be 2.5:
---- PATHFIND::GET_CLOSEST_VEHICLE_NODE(a_0, &v_5, v_9, 100.0, 2.5)
---- Known node types: simple path/asphalt road, only asphalt road, water, under the map at always the same coords.
---- The node types follows a pattern. For example, every fourth node is of the type water i.e. 3, 7, 11, 15, 19, 23, 27, 31, 35, 39... 239. Could not see any difference between nodes within certain types.
---- Starting at 2, every fourth node is under the map, always same coords.
---- Same with only asphalt road (0, 4, 8, etc) and simple path/asphalt road (1, 5, 9, etc).
---- gtaforums.com/topic/843561-pathfind-node-types
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x240A18690AE96513)
----@param x number
----@param y number
----@param z number
----@param outPosition vector3
----@param nodeType number
----@param p5 number
----@param p6 number
----@return boolean
-function GetClosestVehicleNode(x,y,z,outPosition,nodeType,p5,p6) end
 
 --- ```
 --- p5, p6 and p7 seems to be about the same as p4, p5 and p6 for GET_CLOSEST_VEHICLE_NODE. p6 and/or p7 has something to do with finding a node on the same path/road and same direction(at least for this native, something to do with the heading maybe). Edit this when you find out more.  
@@ -189,19 +131,82 @@ function GetClosestVehicleNode(x,y,z,outPosition,nodeType,p5,p6) end
 ---@return boolean
 function GetClosestVehicleNodeWithHeading(x,y,z,outPosition,outHeading,nodeType,p6,p7) end
 
+--- ```
+--- Get the closest vehicle node to a given position, unknown1 = 3.0, unknown2 = 0  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2EABE3B06F58C1BE)
+---@param x number
+---@param y number
+---@param z number
+---@param outPosition vector3
+---@param unknown1 number
+---@param unknown2 number
+---@return boolean
+function GetClosestMajorVehicleNode(x,y,z,outPosition,unknown1,unknown2) end
+
+--- ```
+--- p1 seems to be always 1.0f in the scripts  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x132F52BBA570FE92)
+---@param x number
+---@param y number
+---@param z number
+---@param p3 number
+---@param p4 number
+---@param p5 vector3
+---@param p6 vector3
+---@param p7 any
+---@param p8 any
+---@param p9 number
+---@param p10 boolean
+---@return any
+function GetClosestRoad(x,y,z,p3,p4,p5,p6,p7,p8,p9,p10) end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xBBB45C3CF5C8AA85)
 ---@return number
 function GetGpsBlipRouteLength() end
 
 --- ```
---- Returns CGameWorldHeightMap's minimum Z value at specified point (grid node).
+--- FYI: When falling through the map (or however you got under it) you will respawn when your player ped's height is <= -200.0 meters (I think you all know this) and when in a vehicle you will actually respawn at the closest vehicle node.
+--- ----------
+--- Vector3 nodePos;
+--- GET_CLOSEST_VEHICLE_NODE(x,y,z,&nodePos,...)
+--- p4 is either 0, 1 or 8. 1 means any path/road. 0 means node in the middle of the closest main (asphalt) road.
+--- p5, p6 are always the same:
+--- 0x40400000 (3.0), 0
+--- p5 can also be 100.0 and p6 can be 2.5:
+--- PATHFIND::GET_CLOSEST_VEHICLE_NODE(a_0, &v_5, v_9, 100.0, 2.5)
+--- Known node types: simple path/asphalt road, only asphalt road, water, under the map at always the same coords.
+--- The node types follows a pattern. For example, every fourth node is of the type water i.e. 3, 7, 11, 15, 19, 23, 27, 31, 35, 39... 239. Could not see any difference between nodes within certain types.
+--- Starting at 2, every fourth node is under the map, always same coords.
+--- Same with only asphalt road (0, 4, 8, etc) and simple path/asphalt road (1, 5, 9, etc).
+--- gtaforums.com/topic/843561-pathfind-node-types
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x336511A34F2E5185)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x240A18690AE96513)
 ---@param x number
 ---@param y number
----@return number
-function GetHeightmapBottomZForPosition(x,y) end
+---@param z number
+---@param outPosition vector3
+---@param nodeType number
+---@param p5 number
+---@param p6 number
+---@return boolean
+function GetClosestVehicleNode(x,y,z,outPosition,nodeType,p5,p6) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x869DAACBBE9FA006)
+---@return boolean
+function GetGpsBlipRouteFound() end
+
+--- p3 can be 0, 1 or 2.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF3162836C28F9DA5)
+---@param result vector3
+---@param p1 boolean
+---@param p2 number
+---@param p3 number
+---@return boolean
+function GetGpsWaypointRouteEnd(result,p1,p2,p3) end
 
 --- ```
 --- Returns CGameWorldHeightMap's minimum Z among all grid nodes that intersect with the specified rectangle.
@@ -214,20 +219,6 @@ function GetHeightmapBottomZForPosition(x,y) end
 ---@return number
 function GetHeightmapBottomZForArea(x1,y1,x2,y2) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x869DAACBBE9FA006)
----@return boolean
-function GetGpsBlipRouteFound() end
-
---- ```
---- Returns CGameWorldHeightMap's maximum Z value at specified point (grid node).
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x29C24BFBED8AB8FB)
----@param x number
----@param y number
----@return number
-function GetHeightmapTopZForPosition(x,y) end
-
 --- ```
 --- Returns CGameWorldHeightMap's maximum Z among all grid nodes that intersect with the specified rectangle.
 --- ```
@@ -238,6 +229,15 @@ function GetHeightmapTopZForPosition(x,y) end
 ---@param y2 number
 ---@return number
 function GetHeightmapTopZForArea(x1,y1,x2,y2) end
+
+--- ```
+--- Returns CGameWorldHeightMap's maximum Z value at specified point (grid node).
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x29C24BFBED8AB8FB)
+---@param x number
+---@param y number
+---@return number
+function GetHeightmapTopZForPosition(x,y) end
 
 --- Gets the next zone that has been disabled using SET_GPS_DISABLED_ZONE_AT_INDEX.
 --- 
@@ -262,22 +262,19 @@ function GetNextGpsDisabledZoneIndex(index) end
 ---@return boolean
 function GetNthClosestVehicleNode(x,y,z,nthClosest,outPosition,unknown1,unknown2,unknown3) end
 
---- ```
---- Get the nth closest vehicle node and its heading. (unknown2 = 9, unknown3 = 3.0, unknown4 = 2.5)  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x80CA6A8B6C094CC4)
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6448050E9C2A7207)
 ---@param x number
 ---@param y number
 ---@param z number
 ---@param nthClosest number
 ---@param outPosition vector3
----@param heading number
----@param unknown1 any
----@param unknown2 number
----@param unknown3 number
----@param unknown4 number
----@return boolean
-function GetNthClosestVehicleNodeWithHeading(x,y,z,nthClosest,outPosition,heading,unknown1,unknown2,unknown3,unknown4) end
+---@param outHeading number
+---@param p6 any
+---@param p7 number
+---@param p8 number
+---@return number
+function GetNthClosestVehicleNodeIdWithHeading(x,y,z,nthClosest,outPosition,outHeading,p6,p7,p8) end
 
 --- ```
 --- See gtaforums.com/topic/843561-pathfind-node-types for node type info. 0 = paved road only, 1 = any road, 3 = water  
@@ -301,6 +298,23 @@ function GetNthClosestVehicleNodeWithHeading(x,y,z,nthClosest,outPosition,headin
 function GetNthClosestVehicleNodeFavourDirection(x,y,z,desiredX,desiredY,desiredZ,nthClosest,outPosition,outHeading,nodetype,p10,p11) end
 
 --- ```
+--- Get the nth closest vehicle node and its heading. (unknown2 = 9, unknown3 = 3.0, unknown4 = 2.5)  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x80CA6A8B6C094CC4)
+---@param x number
+---@param y number
+---@param z number
+---@param nthClosest number
+---@param outPosition vector3
+---@param heading number
+---@param unknown1 any
+---@param unknown2 number
+---@param unknown3 number
+---@param unknown4 number
+---@return boolean
+function GetNthClosestVehicleNodeWithHeading(x,y,z,nthClosest,outPosition,heading,unknown1,unknown2,unknown3,unknown4) end
+
+--- ```
 --- Returns the id.  
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x22D7275A79FE8215)
@@ -315,6 +329,27 @@ function GetNthClosestVehicleNodeFavourDirection(x,y,z,desiredX,desiredY,desired
 function GetNthClosestVehicleNodeId(x,y,z,nth,nodetype,p5,p6) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x16F46FB18C8009E4)
+---@param x number
+---@param y number
+---@param z number
+---@param p3 number
+---@param outPosition vector3
+---@return boolean
+function GetPointOnRoadSide(x,y,z,p3,outPosition) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x01708E8DD3FF8C65)
+---@param p0 number
+---@param p1 number
+---@param p2 number
+---@param p3 number
+---@param p4 number
+---@param p5 number
+---@return number
+function GetNumNavmeshesExistingInArea(p0,p1,p2,p3,p4,p5) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x93E0DB8440B73A7D)
 ---@param x number
 ---@param y number
@@ -327,6 +362,26 @@ function GetNthClosestVehicleNodeId(x,y,z,nth,nodetype,p5,p6) end
 ---@param nodeId number
 ---@return boolean
 function GetRandomVehicleNode(x,y,z,radius,p4,p5,p6,outPosition,nodeId) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA0F8A7517A273C05)
+---@param x number
+---@param y number
+---@param z number
+---@param heading number
+---@param outPosition vector3
+---@return boolean
+function GetRoadBoundaryUsingHeading(x,y,z,heading,outPosition) end
+
+--- ```
+--- Returns false for nodes that aren't used for GPS routes.
+--- Example:
+--- Nodes in Fort Zancudo and LSIA are false
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA2AE5C478B96E3B6)
+---@param nodeID number
+---@return boolean
+function GetVehicleNodeIsGpsAllowed(nodeID) end
 
 --- ```
 --- Flags are:
@@ -350,30 +405,6 @@ function GetRandomVehicleNode(x,y,z,radius,p4,p5,p6,outPosition,nodeId) end
 ---@return boolean
 function GetSafeCoordForPed(x,y,z,onGround,outPosition,flags) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA0F8A7517A273C05)
----@param x number
----@param y number
----@param z number
----@param heading number
----@param outPosition vector3
----@return boolean
-function GetRoadSidePointWithHeading(x,y,z,heading,outPosition) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6448050E9C2A7207)
----@param x number
----@param y number
----@param z number
----@param nthClosest number
----@param outPosition vector3
----@param outHeading number
----@param p6 any
----@param p7 number
----@param p8 number
----@return number
-function GetNthClosestVehicleNodeIdWithHeading(x,y,z,nthClosest,outPosition,outHeading,p6,p7,p8) end
-
 --- ```
 --- Determines the name of the street which is the closest to the given coordinates.
 --- x,y,z - the coordinates of the street
@@ -389,15 +420,14 @@ function GetNthClosestVehicleNodeIdWithHeading(x,y,z,nthClosest,outPosition,outH
 ---@param crossingRoad any
 function GetStreetNameAtCoord(x,y,z,streetName,crossingRoad) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x16F46FB18C8009E4)
+--- ```
+--- Returns CGameWorldHeightMap's minimum Z value at specified point (grid node).
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x336511A34F2E5185)
 ---@param x number
 ---@param y number
----@param z number
----@param p3 number
----@param outPosition vector3
----@return boolean
-function GetPointOnRoadSide(x,y,z,p3,outPosition) end
+---@return number
+function GetHeightmapBottomZForPosition(x,y) end
 
 --- ```
 --- Returns true when the node is Offroad. Alleys, some dirt roads, and carparks return true.
@@ -417,6 +447,20 @@ function GetVehicleNodeIsSwitchedOff(nodeID) end
 ---@param nodeId number
 ---@param outPosition vector3
 function GetVehicleNodePosition(nodeId,outPosition) end
+
+--- ```
+--- Gets the density and flags of the closest node to the specified position.  
+--- Density is a value between 0 and 15, indicating how busy the road is.  
+--- Flags is a bit field.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x0568566ACBB5DEDC)
+---@param x number
+---@param y number
+---@param z number
+---@param density number
+---@param flags number
+---@return boolean
+function GetVehicleNodeProperties(x,y,z,density,flags) end
 
 --- ```
 --- Returns whether navmesh for the region is loaded. The region is a rectangular prism defined by it's top left deepest corner to it's bottom right shallowest corner.  
@@ -440,16 +484,6 @@ function IsNavmeshLoadedInArea(x1,y1,z1,x2,y2,z2) end
 function IsNavmeshRequiredRegionOwnedByAnyThread() end
 
 --- ```
---- Returns false for nodes that aren't used for GPS routes.
---- Example:
---- Nodes in Fort Zancudo and LSIA are false
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA2AE5C478B96E3B6)
----@param nodeID number
----@return boolean
-function GetVehicleNodeIsGpsAllowed(nodeID) end
-
---- ```
 --- Gets a value indicating whether the specified position is on a road.  
 --- The vehicle parameter is not implemented (ignored).  
 --- ```
@@ -462,18 +496,12 @@ function GetVehicleNodeIsGpsAllowed(nodeID) end
 function IsPointOnRoad(x,y,z,vehicle) end
 
 --- ```
---- Gets the density and flags of the closest node to the specified position.  
---- Density is a value between 0 and 15, indicating how busy the road is.  
---- Flags is a bit field.  
+--- This native has been removed in v1180.  
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x0568566ACBB5DEDC)
----@param x number
----@param y number
----@param z number
----@param density number
----@param flags number
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x80E4A6EDDB0BE8D9)
+---@param keepInMemory boolean
 ---@return boolean
-function GetVehicleNodeProperties(x,y,z,density,flags) end
+function LoadAllPathNodes(keepInMemory) end
 
 --- ```
 --- Returns true if the id is non zero.  
@@ -482,26 +510,6 @@ function GetVehicleNodeProperties(x,y,z,density,flags) end
 ---@param vehicleNodeId number
 ---@return boolean
 function IsVehicleNodeIdValid(vehicleNodeId) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x01708E8DD3FF8C65)
----@param p0 number
----@param p1 number
----@param p2 number
----@param p3 number
----@param p4 number
----@param p5 number
----@return any
-function N_0x01708e8dd3ff8c65(p0,p1,p2,p3,p4,p5) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF3162836C28F9DA5)
----@param p0 any
----@param p1 any
----@param p2 any
----@param p3 any
----@return any
-function N_0xf3162836c28f9da5(p0,p1,p2,p3) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xAA76052DDA9BFC3E)
@@ -514,18 +522,23 @@ function N_0xf3162836c28f9da5(p0,p1,p2,p3) end
 ---@param p6 any
 function N_0xaa76052dda9bfc3e(p0,p1,p2,p3,p4,p5,p6) end
 
---- ```
---- This native has been removed in v1180.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x80E4A6EDDB0BE8D9)
----@param keepInMemory boolean
----@return boolean
-function LoadAllPathNodes(keepInMemory) end
-
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x46399A7895957C0E)
 ---@param p0 any
 function RemoveNavmeshBlockingObject(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x916F0A3CDEC3445E)
+function RemoveNavmeshRequiredRegions() end
+
+--- Activates Cayo Perico path nodes if passed `1`. GPS navigation will start working, maybe more stuff will change, not sure. It seems if you try to unload (pass `0`) when close to the island, your game might crash.
+--- 
+--- ```
+--- NativeDB Introduced: v2189
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF74B1FFA4A15FBEA)
+---@param type number
+function SetAiGlobalPathNodesType(type) end
 
 --- ```
 --- Used internally for long range tasks
@@ -538,41 +551,10 @@ function RemoveNavmeshBlockingObject(p0) end
 ---@return boolean
 function RequestPathsPreferAccurateBoundingstruct(x1,y1,x2,y2) end
 
---- Activates Cayo Perico path nodes if passed `1`. GPS navigation will start working, maybe more stuff will change, not sure. It seems if you try to unload (pass `0`) when close to the island, your game might crash.
---- 
---- ```
---- NativeDB Introduced: v2189
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF74B1FFA4A15FBEA)
----@param type number
-function SetAiGlobalPathNodesType(type) end
-
---- ```
---- Toggles a global boolean, name is probably a hash collision but describes its functionality.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x228E5C6AD4D74BFD)
----@param toggle boolean
-function SetAllPathsCacheBoundingstruct(toggle) end
-
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x0B919E1FB47CC4E0)
 ---@param multiplier number
 function SetAmbientPedRangeMultiplierThisFrame(multiplier) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x72751156E7678833)
----@param toggle boolean
-function SetIgnoreNoGpsFlag(toggle) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xDC20483CD3DD5201)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
-function SetGpsDisabledZone(x1,y1,z1,x2,y2,z2) end
 
 --- Disables the GPS route displayed on the minimap while within a certain zone (area). When in a disabled zone and creating a waypoint, the GPS route is not shown on the minimap until you are outside of the zone. When disabled, the direct distance is shown on minimap opposed to distance to travel. Seems to only work before setting a waypoint.
 --- 
@@ -593,9 +575,35 @@ function SetGpsDisabledZone(x1,y1,z1,x2,y2,z2) end
 ---@param index number
 function SetGpsDisabledZoneAtIndex(x1,y1,z1,x2,y2,z2,index) end
 
+--- ```
+--- Toggles a global boolean, name is probably a hash collision but describes its functionality.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x228E5C6AD4D74BFD)
+---@param toggle boolean
+function SetAllPathsCacheBoundingstruct(toggle) end
+
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x916F0A3CDEC3445E)
-function RemoveNavmeshRequiredRegions() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xDC20483CD3DD5201)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+function SetGpsDisabledZone(x1,y1,z1,x2,y2,z2) end
+
+--- ```
+--- NativeDB Added Parameter 8: Any p7
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x34F060F4BF92E018)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@param unknown boolean
+function SetPedPathsInArea(x1,y1,z1,x2,y2,z2,unknown) end
 
 --- ```
 --- See: SET_BLIP_ROUTE
@@ -604,33 +612,10 @@ function RemoveNavmeshRequiredRegions() end
 ---@param toggle boolean
 function SetIgnoreSecondaryRouteNodes(toggle) end
 
---- ```
---- NativeDB Added Parameter 7: Any p6
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE04B48F2CC926253)
----@param p0 any
----@param p1 any
----@param p2 any
----@param p3 any
----@param p4 any
----@param p5 any
-function SetPedPathsBackToOriginal(p0,p1,p2,p3,p4,p5) end
-
---- ```
---- missing a last parameter int p6  
---- ```
---- 
---- ```
---- NativeDB Added Parameter 7: Any p6
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1EE7063B80FFC77C)
----@param p0 number
----@param p1 number
----@param p2 number
----@param p3 number
----@param p4 number
----@param p5 number
-function SetRoadsBackToOriginal(p0,p1,p2,p3,p4,p5) end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x72751156E7678833)
+---@param toggle boolean
+function SetIgnoreNoGpsFlag(toggle) end
 
 --- See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
 --- 
@@ -665,6 +650,47 @@ function SetRoadsBackToOriginalInAngledArea(x1,y1,z1,x2,y2,z2,width) end
 ---@param unknown3 boolean
 function SetRoadsInAngledArea(x1,y1,z1,x2,y2,z2,width,unknown1,unknown2,unknown3) end
 
+--- ```
+--- NativeDB Added Parameter 7: Any p6
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE04B48F2CC926253)
+---@param p0 any
+---@param p1 any
+---@param p2 any
+---@param p3 any
+---@param p4 any
+---@param p5 any
+function SetPedPathsBackToOriginal(p0,p1,p2,p3,p4,p5) end
+
+--- ```
+--- missing a last parameter int p6  
+--- ```
+--- 
+--- ```
+--- NativeDB Added Parameter 7: Any p6
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1EE7063B80FFC77C)
+---@param p0 number
+---@param p1 number
+---@param p2 number
+---@param p3 number
+---@param p4 number
+---@param p5 number
+function SetRoadsBackToOriginal(p0,p1,p2,p3,p4,p5) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x109E99373F290687)
+---@param p0 any
+---@param p1 number
+---@param p2 number
+---@param p3 number
+---@param p4 number
+---@param p5 number
+---@param p6 number
+---@param p7 number
+---@param p8 any
+function UpdateNavmeshBlockingObject(p0,p1,p2,p3,p4,p5,p6,p7,p8) end
+
 --- When this is set to false, all nodes in the area get disabled.
 --- 
 --- `GET_VEHICLE_NODE_IS_SWITCHED_OFF` returns true afterwards.
@@ -682,29 +708,3 @@ function SetRoadsInAngledArea(x1,y1,z1,x2,y2,z2,width,unknown1,unknown2,unknown3
 ---@param nodeEnabled boolean
 ---@param unknown2 boolean
 function SetRoadsInArea(x1,y1,z1,x2,y2,z2,nodeEnabled,unknown2) end
-
---- ```
---- NativeDB Added Parameter 8: Any p7
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x34F060F4BF92E018)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param unknown boolean
-function SetPedPathsInArea(x1,y1,z1,x2,y2,z2,unknown) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x109E99373F290687)
----@param p0 any
----@param p1 number
----@param p2 number
----@param p3 number
----@param p4 number
----@param p5 number
----@param p6 number
----@param p7 number
----@param p8 any
-function UpdateNavmeshBlockingObject(p0,p1,p2,p3,p4,p5,p6,p7,p8) end

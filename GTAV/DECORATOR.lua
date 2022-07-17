@@ -6,6 +6,23 @@
 ---@return boolean
 function DecorGetBool(entity,propertyName) end
 
+--- Decor types:
+--- 
+--- ```
+--- enum eDecorType
+--- {
+---     DECOR_TYPE_FLOAT = 1,
+---     DECOR_TYPE_BOOL = 2,
+---     DECOR_TYPE_INT = 3,
+---     DECOR_TYPE_UNK = 4,
+---     DECOR_TYPE_TIME = 5
+--- };
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x9FD90732F56403CE)
+---@param propertyName string
+---@param type number
+function DecorRegister(propertyName,type) end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA06C969B02A97298)
 ---@param entity number
@@ -21,11 +38,11 @@ function DecorGetInt(entity,propertyName) end
 function DecorIsRegisteredAsType(propertyName,type) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6524A2F114706F43)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x00EE9F297C738720)
 ---@param entity number
 ---@param propertyName string
----@return number
-function DecorGetFloat(entity,propertyName) end
+---@return boolean
+function DecorRemove(entity,propertyName) end
 
 --- ```
 --- Returns whether or not the specified property is set for the entity.  
@@ -35,6 +52,27 @@ function DecorGetFloat(entity,propertyName) end
 ---@param propertyName string
 ---@return boolean
 function DecorExistOn(entity,propertyName) end
+
+--- ```
+--- Called after all decorator type initializations.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA9D14EEA259F9248)
+function DecorRegisterLock() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x211AB1DD8D0F363A)
+---@param entity number
+---@param propertyName string
+---@param value number
+---@return boolean
+function DecorSetFloat(entity,propertyName,value) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6524A2F114706F43)
+---@param entity number
+---@param propertyName string
+---@return number
+function DecorGetFloat(entity,propertyName) end
 
 --- ```
 --- This function sets metadata of type bool to specified entity.  
@@ -47,25 +85,12 @@ function DecorExistOn(entity,propertyName) end
 function DecorSetBool(entity,propertyName,value) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x00EE9F297C738720)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x95AED7B8E39ECAA4)
 ---@param entity number
 ---@param propertyName string
+---@param timestamp number
 ---@return boolean
-function DecorRemove(entity,propertyName) end
-
---- ```
---- Called after all decorator type initializations.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA9D14EEA259F9248)
-function DecorRegisterLock() end
-
---- ```
---- https://alloc8or.re/gta5/doc/enums/eDecorType.txt
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x9FD90732F56403CE)
----@param propertyName string
----@param type number
-function DecorRegister(propertyName,type) end
+function DecorSetTime(entity,propertyName,timestamp) end
 
 --- ```
 --- Sets property to int.  
@@ -76,19 +101,3 @@ function DecorRegister(propertyName,type) end
 ---@param value number
 ---@return boolean
 function DecorSetInt(entity,propertyName,value) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x95AED7B8E39ECAA4)
----@param entity number
----@param propertyName string
----@param timestamp number
----@return boolean
-function DecorSetTime(entity,propertyName,timestamp) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x211AB1DD8D0F363A)
----@param entity number
----@param propertyName string
----@param value number
----@return boolean
-function DecorSetFloat(entity,propertyName,value) end

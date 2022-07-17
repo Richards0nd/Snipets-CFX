@@ -5,6 +5,18 @@
 ---@return number
 function Absf(value) end
 
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF0D31AD191A74F87)
+---@param value number
+---@return number
+function Absi(value) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1D08B970013C34B6)
+---@param p0 number
+---@return number
+function Acos(p0) end
+
 --- To remove, see: [`REMOVE_DISPATCH_SPAWN_BLOCKING_AREA`](#\_0x264AC28B01B353A5).
 --- 
 --- See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
@@ -19,36 +31,21 @@ function Absf(value) end
 ---@return any
 function AddDispatchSpawnBlockingAngledArea(x1,y1,z1,x2,y2,z2,width) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF0D31AD191A74F87)
----@param value number
----@return number
-function Absi(value) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x452736765B31FC4B)
----@param p0 number
----@param p1 number
----@param p2 number
----@param p3 number
----@param p4 any
----@return any
-function AddPoliceRestart(p0,p1,p2,p3,p4) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1D08B970013C34B6)
----@param p0 number
----@return number
-function Acos(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2D4259F1FEB81DA9)
+--- ```
+--- NativeDB Added Parameter 10: BOOL p9
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x67F6413D3220E18D)
 ---@param x1 number
 ---@param y1 number
+---@param z1 number
 ---@param x2 number
 ---@param y2 number
----@return any
-function AddDispatchSpawnBlockingArea(x1,y1,x2,y2) end
+---@param z2 number
+---@param p6 number
+---@param p7 number
+---@param p8 boolean
+---@return number
+function AddPopMultiplierArea(x1,y1,z1,x2,y2,z2,p6,p7,p8) end
 
 --- ```
 --- Returns the index of the newly created hospital spawn point.  
@@ -62,6 +59,15 @@ function AddDispatchSpawnBlockingArea(x1,y1,x2,y2) end
 ---@param p4 any
 ---@return number
 function AddHospitalRestart(x,y,z,p3,p4) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2D4259F1FEB81DA9)
+---@param x1 number
+---@param y1 number
+---@param x2 number
+---@param y2 number
+---@return any
+function AddDispatchSpawnBlockingArea(x1,y1,x2,y2) end
 
 --- ```
 --- This native is adding a zone, where you can change density settings. For example, you can add a zone on 0.0, 0.0, 0.0 with radius 900.0 and vehicleMultiplier 0.0, and you will not see any new population vehicle spawned in a radius of 900.0 from 0.0, 0.0, 0.0. Returns the id. You can have only 15 zones at the same time. You can remove zone using REMOVE_POP_MULTIPLIER_SPHERE
@@ -100,6 +106,11 @@ function AddPopMultiplierSphere(x,y,z,radius,pedMultiplier,vehicleMultiplier,p6,
 ---@param unk3 number
 ---@return number
 function AddStuntJump(x1,y1,z1,x2,y2,z2,x3,y3,z3,x4,y4,z4,camX,camY,camZ,unk1,unk2,unk3) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x69FE6DC87BD2A5E9)
+---@param value any
+function AddReplayStatValue(value) end
 
 --- Creates a new stunt jump.
 --- 
@@ -153,9 +164,19 @@ function AddStuntJump(x1,y1,z1,x2,y2,z2,x3,y3,z3,x4,y4,z4,camX,camY,camZ,unk1,un
 function AddStuntJumpAngled(x1,y1,z1,x2,y2,z2,radius1,x3,y3,z3,x4,y4,z4,radius2,camX,camY,camZ,unk1,unk2,unk3) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x69FE6DC87BD2A5E9)
----@param value any
-function AddReplayStatValue(value) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x452736765B31FC4B)
+---@param p0 number
+---@param p1 number
+---@param p2 number
+---@param p3 number
+---@param p4 any
+---@return any
+function AddPoliceRestart(p0,p1,p2,p3,p4) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x5AA3BEFA29F03AD4)
+---@return boolean
+function AreProfileSettingsValid() end
 
 --- ```
 --- Adds a point related to CTacticalAnalysis
@@ -167,32 +188,30 @@ function AddReplayStatValue(value) end
 function AddTacticalAnalysisPoint(x,y,z) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xC843060B5765DCE7)
+---@param p0 number
+---@return number
+function Asin(p0) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x0C515FAB3FF9EA92)
 ---@param string1 string
 ---@param string2 string
 ---@return boolean
 function AreStringsEqual(string1,string2) end
 
---- ```
---- NativeDB Added Parameter 10: BOOL p9
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x67F6413D3220E18D)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param p6 number
----@param p7 number
----@param p8 boolean
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8927CBF9D22261A4)
+---@param p0 number
+---@param p1 number
 ---@return number
-function AddPopMultiplierArea(x1,y1,z1,x2,y2,z2,p6,p7,p8) end
+function Atan2(p0,p1) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x5AA3BEFA29F03AD4)
----@return boolean
-function AreProfileSettingsValid() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x9B2BD3773123EA2F)
+---@param dispatchService number
+---@param toggle boolean
+function BlockDispatchServiceResourceCreation(dispatchService,toggle) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xDEA36202FC3382DF)
@@ -205,18 +224,23 @@ function AllowMissionCreatorWarp(toggle) end
 ---@param p1 any
 function BeginReplayStats(p0,p1) end
 
+--- ```
+--- DO NOT use this as it doesn't clean up the text input box properly and your script will get stuck in the UPDATE_ONSCREEN_KEYBOARD() loop.
+--- Use _FORCE_CLOSE_TEXT_INPUT_BOX instead.
+--- CANCEL_*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x58A39BE597CE99CD)
+function CancelOnscreenKeyboard() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xC79AE21974B01FB2)
+function CleanupAsyncInstall() end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA9D1795CD5043663)
 ---@param p0 number
 ---@return number
 function Atan(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8927CBF9D22261A4)
----@param p0 number
----@param p1 number
----@return number
-function Atan2(p0,p1) end
 
 --- ```
 --- NativeDB Added Parameter 13: Any p12
@@ -235,38 +259,6 @@ function Atan2(p0,p1) end
 ---@param p10 boolean
 ---@param p11 boolean
 function ClearAngledAreaOfVehicles(x1,y1,z1,x2,y2,z2,width,p7,p8,p9,p10,p11) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE6B7B0ACD4E4B75E)
-function CancelStuntJump() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xC843060B5765DCE7)
----@param p0 number
----@return number
-function Asin(p0) end
-
---- ```
---- DO NOT use this as it doesn't clean up the text input box properly and your script will get stuck in the UPDATE_ONSCREEN_KEYBOARD() loop.
---- Use _FORCE_CLOSE_TEXT_INPUT_BOX instead.
---- CANCEL_*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x58A39BE597CE99CD)
-function CancelOnscreenKeyboard() end
-
---- ```
---- MISC::_0x957838AAF91BD12D(x, y, z, radius, false, false, false, false); seem to make all objects go away, peds, vehicles etc. All booleans set to true doesn't seem to change anything.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x957838AAF91BD12D)
----@param x number
----@param y number
----@param z number
----@param radius number
----@param p4 boolean
----@param p5 boolean
----@param p6 boolean
----@param p7 boolean
-function ClearAreaLeaveVehicleHealth(x,y,z,radius,p4,p5,p6,p7) end
 
 --- ```
 --- flags appears to always be 0
@@ -294,30 +286,18 @@ function ClearAreaOfCops(x,y,z,radius,flags) end
 function ClearArea(X,Y,Z,radius,p4,ignoreCopCars,ignoreObjects,p7) end
 
 --- ```
---- Example:       CLEAR_AREA_OF_PEDS(0, 0, 0, 10000, 1);
+--- MISC::_0x957838AAF91BD12D(x, y, z, radius, false, false, false, false); seem to make all objects go away, peds, vehicles etc. All booleans set to true doesn't seem to change anything.
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xBE31FD6CE464AC59)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x957838AAF91BD12D)
 ---@param x number
 ---@param y number
 ---@param z number
 ---@param radius number
----@param flags number
-function ClearAreaOfPeds(x,y,z,radius,flags) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x9B2BD3773123EA2F)
----@param dispatchService number
----@param toggle boolean
-function BlockDispatchServiceResourceCreation(dispatchService,toggle) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x0A1CB9094635D1A6)
----@param x number
----@param y number
----@param z number
----@param radius number
----@param flags number
-function ClearAreaOfProjectiles(x,y,z,radius,flags) end
+---@param p4 boolean
+---@param p5 boolean
+---@param p6 boolean
+---@param p7 boolean
+function ClearAreaLeaveVehicleHealth(x,y,z,radius,p4,p5,p6,p7) end
 
 --- ```
 --- I looked through the PC scripts that this site provides you with a link to find. It shows the last param mainly uses, (0, 2, 6, 16, and 17) so I am going to assume it is a type of flag.  
@@ -350,6 +330,29 @@ function ClearAreaOfObjects(x,y,z,radius,flags) end
 function ClearAreaOfVehicles(x,y,z,radius,p4,p5,p6,p7,p8) end
 
 --- ```
+--- Example:       CLEAR_AREA_OF_PEDS(0, 0, 0, 10000, 1);
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xBE31FD6CE464AC59)
+---@param x number
+---@param y number
+---@param z number
+---@param radius number
+---@param flags number
+function ClearAreaOfPeds(x,y,z,radius,flags) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x957E790EA1727B64)
+function ClearCloudHat() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE6B7B0ACD4E4B75E)
+function CancelStuntJump() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x338D2E3477711050)
+function ClearOverrideWeather() end
+
+--- ```
 --- This sets bit [offset] of [address] to off.
 --- Example:
 --- MISC::CLEAR_BIT(&bitAddress, 1);
@@ -362,28 +365,71 @@ function ClearAreaOfVehicles(x,y,z,radius,p4,p5,p6,p7,p8) end
 function ClearBit(address,offset) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x957E790EA1727B64)
-function ClearCloudHat() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xC79AE21974B01FB2)
-function CleanupAsyncInstall() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA2716D40842EAF79)
-function ClearRestartCustomPosition() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1B1AB132A16FDA55)
+function ClearReplayStats() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xB3CD58CCA6CDA852)
 function ClearTacticalAnalysisPoints() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1B1AB132A16FDA55)
-function ClearReplayStats() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x213AEB2B90CBA7AC)
+---@param dst any
+---@param src any
+---@param size number
+function CopyMemory(dst,src,size) end
+
+--- ```
+--- enum IncidentTypes  
+--- {  
+---     FireDepartment = 3,  
+---     Paramedics = 5,  
+---     Police = 7,  
+---     PedsInCavalcades = 11,   
+---     Merryweather = 14  
+--- };  
+--- As for the 'police' incident, it will call police cars to you, but unlike PedsInCavalcades & Merryweather they won't start shooting at you unless you shoot first or shoot at them. The top 2 however seem to cancel theirselves if there is noone dead around you or a fire. I only figured them out as I found out the 3rd param is definately the amountOfPeople and they called incident 3 in scripts with 4 people (which the firetruck has) and incident 5 with 2 people (which the ambulence has). The 4 param I cant say is radius, but for the pedsInCavalcades and Merryweather R* uses 0.0f and for the top 3 (Emergency Services) they use 3.0f.   
+--- Side Note: It seems calling the pedsInCavalcades or Merryweather then removing it seems to break you from calling the EmergencyEvents and I also believe pedsInCavalcades. (The V cavalcades of course not IV).  
+--- Side Note 2: I say it breaks as if you call this proper,  
+--- if(CREATE_INCIDENT) etc it will return false if you do as I said above.  
+--- =====================================================  
+--- ```
+--- 
+--- ```
+--- NativeDB Added Parameter 8: Any p7
+--- NativeDB Added Parameter 9: Any p8
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x3F892CAF67444AE7)
+---@param dispatchService number
+---@param x number
+---@param y number
+---@param z number
+---@param numUnits number
+---@param radius number
+---@param outIncidentID number
+---@return boolean
+function CreateIncident(dispatchService,x,y,z,numUnits,radius,outIncidentID) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xCCC39339BEF76CF5)
-function ClearWeatherTypePersist() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x0A1CB9094635D1A6)
+---@param x number
+---@param y number
+---@param z number
+---@param radius number
+---@param flags number
+function ClearAreaOfProjectiles(x,y,z,radius,flags) end
+
+--- ```
+--- Delete an incident with a given id.  
+--- =======================================================  
+--- Correction, I have change this to int, instead of int*  
+--- as it doesn't use a pointer to the createdIncident.  
+--- If you try it you will crash (or) freeze.  
+--- =======================================================  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x556C1AA270D5A207)
+---@param incidentId number
+function DeleteIncident(incidentId) end
 
 --- ```
 --- Compares two strings up to a specified number of characters.
@@ -448,61 +494,6 @@ function CompareStrings(str1,str2,matchCase,maxLength) end
 ---@return boolean
 function CreateIncidentWithEntity(dispatchService,ped,numUnits,radius,outIncidentID) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x213AEB2B90CBA7AC)
----@param dst any
----@param src any
----@param size number
-function CopyMemory(dst,src,size) end
-
---- ```
---- enum IncidentTypes  
---- {  
----     FireDepartment = 3,  
----     Paramedics = 5,  
----     Police = 7,  
----     PedsInCavalcades = 11,   
----     Merryweather = 14  
---- };  
---- As for the 'police' incident, it will call police cars to you, but unlike PedsInCavalcades & Merryweather they won't start shooting at you unless you shoot first or shoot at them. The top 2 however seem to cancel theirselves if there is noone dead around you or a fire. I only figured them out as I found out the 3rd param is definately the amountOfPeople and they called incident 3 in scripts with 4 people (which the firetruck has) and incident 5 with 2 people (which the ambulence has). The 4 param I cant say is radius, but for the pedsInCavalcades and Merryweather R* uses 0.0f and for the top 3 (Emergency Services) they use 3.0f.   
---- Side Note: It seems calling the pedsInCavalcades or Merryweather then removing it seems to break you from calling the EmergencyEvents and I also believe pedsInCavalcades. (The V cavalcades of course not IV).  
---- Side Note 2: I say it breaks as if you call this proper,  
---- if(CREATE_INCIDENT) etc it will return false if you do as I said above.  
---- =====================================================  
---- ```
---- 
---- ```
---- NativeDB Added Parameter 8: Any p7
---- NativeDB Added Parameter 9: Any p8
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x3F892CAF67444AE7)
----@param dispatchService number
----@param x number
----@param y number
----@param z number
----@param numUnits number
----@param radius number
----@param outIncidentID number
----@return boolean
-function CreateIncident(dispatchService,x,y,z,numUnits,radius,outIncidentID) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xDC518000E39DAE1F)
----@param p0 number
-function DeleteStuntJump(p0) end
-
---- ```
---- Delete an incident with a given id.  
---- =======================================================  
---- Correction, I have change this to int, instead of int*  
---- as it doesn't use a pointer to the createdIncident.  
---- If you try it you will crash (or) freeze.  
---- =======================================================  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x556C1AA270D5A207)
----@param incidentId number
-function DeleteIncident(incidentId) end
-
 --- ```
 --- The game by default has 5 hospital respawn points. Disabling them all will cause the player to respawn at the last position they were.
 --- ```
@@ -512,8 +503,12 @@ function DeleteIncident(incidentId) end
 function DisableHospitalRestart(hospitalIndex,toggle) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x338D2E3477711050)
-function ClearOverrideWeather() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xCCC39339BEF76CF5)
+function ClearWeatherTypePersist() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA2716D40842EAF79)
+function ClearRestartCustomPosition() end
 
 --- ```
 --- Disables the spawn point at the police house on the specified index.
@@ -566,12 +561,6 @@ function DisablePoliceRestart(policeIndex,toggle) end
 function DisplayOnscreenKeyboard(p0,windowTitle,p2,defaultText,defaultConcat1,defaultConcat2,defaultConcat3,maxInputLength) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1327E2FE9746BAEE)
----@param id number
----@return boolean
-function DoesPopMultiplierAreaExist(id) end
-
---- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xCA78CFA0366592FE)
 ---@param p0 number
 ---@param windowTitle string
@@ -588,8 +577,47 @@ function DoesPopMultiplierAreaExist(id) end
 function DisplayOnscreenKeyboardWithLongerInitialString(p0,windowTitle,p2,defaultText,defaultConcat1,defaultConcat2,defaultConcat3,defaultConcat4,defaultConcat5,defaultConcat6,defaultConcat7,maxInputLength) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x50EEAAD86232EE55)
-function DoAutoSave() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA5272EBEDD4747F6)
+---@param p0 number
+function DisableStuntJumpSet(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1327E2FE9746BAEE)
+---@param id number
+---@return boolean
+function DoesPopMultiplierAreaExist(id) end
+
+--- Enables or disables the specified 'dispatch service' type. 'Dispatch services' are used for spawning AI response peds/vehicles for events such as a fire in the street (type 3 - DT_FireDepartment), or gunfire in a gang area (type 11 - DT_Gangs).
+--- 
+--- List of dispatch services:
+--- 
+--- ```cpp
+--- enum DispatchType
+--- {
+--- 	DT_Invalid = 0,
+--- 	DT_PoliceAutomobile,
+--- 	DT_PoliceHelicopter,
+--- 	DT_FireDepartment,
+--- 	DT_SwatAutomobile,
+--- 	DT_AmbulanceDepartment,
+--- 	DT_PoliceRiders,
+--- 	DT_PoliceVehicleRequest,
+--- 	DT_PoliceRoadBlock,
+--- 	DT_PoliceAutomobileWaitPulledOver,
+--- 	DT_PoliceAutomobileWaitCruising,
+--- 	DT_Gangs,
+--- 	DT_SwatHelicopter,
+--- 	DT_PoliceBoat,
+--- 	DT_ArmyVehicle,
+--- 	DT_BikerBackup = 15
+--- };
+--- ```
+--- 
+--- Note that 'dispatch service' has nothing to do with the police scanner (audio), to toggle that, use [SET_AUDIO_FLAG](#\_0xB9EFD5C25018725A) with `'PoliceScannerDisabled'`.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xDC0F817884CDD856)
+---@param dispatchService number
+---@param toggle boolean
+function EnableDispatchService(dispatchService,toggle) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x171BAFB3C60389F4)
@@ -598,12 +626,27 @@ function DoAutoSave() end
 function DoesPopMultiplierSphereExist(id) end
 
 --- ```
---- https://alloc8or.re/gta5/doc/enums/DispatchType.txt
+--- Makes the ped jump around like they're in a tennis match  
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xDC0F817884CDD856)
----@param dispatchService number
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x28A04B411933F8A6)
+---@param ped number
 ---@param toggle boolean
-function EnableDispatchService(dispatchService,toggle) end
+---@param p2 boolean
+function EnableTennisMode(ped,toggle,p2) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE369A5783B866016)
+---@param p0 number
+function EnableStuntJumpSet(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x50EEAAD86232EE55)
+function DoAutoSave() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xDC518000E39DAE1F)
+---@param p0 number
+function DeleteStuntJump(p0) end
 
 --- ```
 --- Finds a position ahead of the player by predicting the players next actions.  
@@ -623,18 +666,14 @@ function EnableDispatchService(dispatchService,toggle) end
 function FindSpawnPointInDirection(posX,posY,posZ,dirX,dirY,dirZ,distance,spawnPoint) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE369A5783B866016)
----@param p0 number
-function EnableStuntJumpSet(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA23E821FBDF8A5F2)
+function EndReplayStats() end
 
 --- ```
---- Makes the ped jump around like they're in a tennis match  
+--- creates single lightning+thunder at random position  
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x28A04B411933F8A6)
----@param ped number
----@param toggle boolean
----@param p2 boolean
-function EnableTennisMode(ped,toggle,p2) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF6062E089251C898)
+function ForceLightningFlash() end
 
 --- ```
 --- Sets the localplayer playerinfo state back to playing (State 0)  
@@ -651,6 +690,11 @@ function EnableTennisMode(ped,toggle,p2) end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xC0AA53F866B3134D)
 function ForceGameStatePlaying() end
 
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8B3CA62B1EF19B62)
+---@return number
+function GetAllocatedStackSize() end
+
 --- ```
 --- Exits the game and downloads a fresh social club update on next restart.  
 --- ```
@@ -658,9 +702,13 @@ function ForceGameStatePlaying() end
 function ForceSocialClubUpdate() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA5272EBEDD4747F6)
----@param p0 number
-function DisableStuntJumpSet(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB335F761606DB47C)
+---@param p1 any
+---@param p2 any
+---@param p3 any
+---@param p4 boolean
+---@return boolean
+function GetBaseElementMetadata(p1,p2,p3,p4) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x186FC4BE848E1C92)
@@ -671,31 +719,12 @@ function DisableStuntJumpSet(p0) end
 ---@return number
 function GetAngleBetween_2dVectors(x1,y1,x2,y2) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA23E821FBDF8A5F2)
-function EndReplayStats() end
-
---- ```
---- creates single lightning+thunder at random position  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF6062E089251C898)
-function ForceLightningFlash() end
-
 --- ```
 --- Returns value of the '-benchmarkPass' command line option.
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x1B2366C3F2A5C8DF)
 ---@return number
 function GetBenchmarkPassFromCommandLine() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB335F761606DB47C)
----@param p1 any
----@param p2 any
----@param p3 any
----@param p4 boolean
----@return boolean
-function GetBaseElementMetadata(p1,p2,p3,p4) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xE599A503B3837E1B)
@@ -732,9 +761,19 @@ function GetBitsInRange(var,rangeStart,rangeEnd) end
 function GetCoordsOfProjectileTypeInArea(x1,y1,z1,x2,y2,z2,projectileHash,projectilePos,ownedByPlayer) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8B3CA62B1EF19B62)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4C9296CBCD1B971E)
 ---@return number
-function GetAllocatedStackSize() end
+function GetFakeWantedLevel() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xFC8202EFC642E6F2)
+---@return number
+function GetFrameCount() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x20AC25E781AE4A84)
+---@return number
+function GetCloudHatOpacity() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xDFB4138EEFED7B81)
@@ -745,19 +784,6 @@ function GetAllocatedStackSize() end
 ---@param ownedByPlayer boolean
 ---@return boolean
 function GetCoordsOfProjectileTypeWithinDistance(ped,weaponHash,distance,outCoords,ownedByPlayer) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4C9296CBCD1B971E)
----@return number
-function GetFakeWantedLevel() end
-
---- ```
---- Returns pointer to an empty string.
---- GET_C*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x24DA7D7667FD7B09)
----@return string
-function GetGlobalCharBuffer() end
 
 --- Returns the distance between two three-dimensional points, optionally ignoring the Z values.
 --- If useZ is false, only the 2D plane (X-Y) will be considered for calculating the distance.
@@ -774,14 +800,51 @@ function GetGlobalCharBuffer() end
 function GetDistanceBetweenCoords(x1,y1,z1,x2,y2,z2,useZ) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8BDC7BFC57A81E76)
+---@param x number
+---@param y number
+---@param z number
+---@param groundZ number
+---@param normal vector3
+---@return boolean
+function GetGroundZAndNormalFor_3dCoord(x,y,z,groundZ,normal) end
+
+--- ```
+--- Returns pointer to an empty string.
+--- GET_C*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x24DA7D7667FD7B09)
+---@return string
+function GetGlobalCharBuffer() end
+
+--- ```
+--- NativeDB Added Parameter 6: BOOL p5
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x9E82F0F362881B29)
+---@param x number
+---@param y number
+---@param z number
+---@param groundZ number
+---@param p4 boolean
+---@return boolean
+function GetGroundZFor_3dCoord_2(x,y,z,groundZ,p4) end
+
+--- ```
+--- dx = x1 - x2
+--- dy = y1 - y2
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2FFB6B224F4B2926)
+---@param dx number
+---@param dy number
+---@return number
+function GetHeadingFromVector_2d(dx,dy) end
+
+--- Gets the high precision frame time of the last frame in seconds.
+--- 
+--- *note: the example above is way less precise.*
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x15C40837039FFAF7)
 ---@return number
 function GetFrameTime() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xFC8202EFC642E6F2)
----@return number
-function GetFrameCount() end
 
 --- ```
 --- Bear in mind this native can only calculate the elevation when the coordinates are within the client's render distance.
@@ -805,47 +868,27 @@ function GetGroundZFor_3dCoord(x,y,z,groundZ,ignoreWater) end
 ---@return any
 function GetHashKey(string) end
 
+--- ```
+--- Although we don't have a jenkins hash for this one, the name is 100% confirmed.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x9689123E3F213AA5)
+---@return boolean
+function GetIsPlayerInAnimalForm() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xCBAD6729F7B1F4FC)
+---@return number
+function GetIndexOfCurrentLevel() end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x9CD27B0045628463)
 ---@return number
 function GetGameTimer() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x20AC25E781AE4A84)
----@return number
-function GetCloudHatOpacity() end
-
---- ```
---- dx = x1 - x2
---- dy = y1 - y2
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2FFB6B224F4B2926)
----@param dx number
----@param dy number
----@return number
-function GetHeadingFromVector_2d(dx,dy) end
-
---- ```
---- NativeDB Added Parameter 6: BOOL p5
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x9E82F0F362881B29)
----@param x number
----@param y number
----@param z number
----@param groundZ number
----@param p4 boolean
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA33CDCCDA663159E)
 ---@return boolean
-function GetGroundZFor_3dCoord_2(x,y,z,groundZ,p4) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8BDC7BFC57A81E76)
----@param x number
----@param y number
----@param z number
----@param groundZ number
----@param normal vector3
----@return boolean
-function GetGroundZAndNormalFor_3dCoord(x,y,z,groundZ,normal) end
+function GetMissionFlag() end
 
 --- ```
 --- Returns true if profile setting 208 is equal to 0.
@@ -854,12 +897,10 @@ function GetGroundZAndNormalFor_3dCoord(x,y,z,groundZ,normal) end
 ---@return boolean
 function GetIsAutoSaveOff() end
 
---- ```
---- Although we don't have a jenkins hash for this one, the name is 100% confirmed.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x9689123E3F213AA5)
----@return boolean
-function GetIsPlayerInAnimalForm() end
+--- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x711327CD09C8F162)
+---@return any
+function GetNextWeatherTypeHashName() end
 
 --- ```
 --- Gets the dimensions of a model.
@@ -873,32 +914,15 @@ function GetIsPlayerInAnimalForm() end
 function GetModelDimensions(modelHash,minimum,maximum) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xCBAD6729F7B1F4FC)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x996DD1E1E02F1008)
 ---@return number
-function GetIndexOfCurrentLevel() end
-
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x711327CD09C8F162)
----@return any
-function GetNextWeatherTypeHashName() end
+function GetNumSuccessfulStuntJumps() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xEB4A0C2D56441717)
 ---@param dispatchService number
 ---@return number
 function GetNumDispatchedUnitsForPlayer(dispatchService) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA33CDCCDA663159E)
----@return boolean
-function GetMissionFlag() end
-
---- ```
---- Returns NULL unless UPDATE_ONSCREEN_KEYBOARD() returns 1 in the same tick.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8362B09B91893647)
----@return string
-function GetOnscreenKeyboardResult() end
 
 --- ```
 --- Returns duration of how long the game has been in power-saving mode (aka "constrained") in milliseconds.
@@ -913,16 +937,18 @@ function GetPowerSavingModeDuration() end
 ---@return number
 function GetNumberOfFreeStacksOfThisSize(stackSize) end
 
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x564B884A05EC45A3)
----@return any
-function GetPrevWeatherTypeHashName() end
-
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xC488FF2356EA7791)
 ---@param profileSetting number
 ---@return number
 function GetProfileSetting(profileSetting) end
+
+--- ```
+--- Returns NULL unless UPDATE_ONSCREEN_KEYBOARD() returns 1 in the same tick.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8362B09B91893647)
+---@return string
+function GetOnscreenKeyboardResult() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x82FDE6A57EE4EE44)
@@ -935,10 +961,17 @@ function GetProfileSetting(profileSetting) end
 ---@return boolean
 function GetProjectileNearPed(ped,weaponHash,distance,outCoords,outProjectile,ownedByPlayer) end
 
+--- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x564B884A05EC45A3)
+---@return any
+function GetPrevWeatherTypeHashName() end
+
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x996DD1E1E02F1008)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x313CE5879CEB6FCD)
+---@param startRange number
+---@param endRange number
 ---@return number
-function GetNumSuccessfulStuntJumps() end
+function GetRandomFloatInRange(startRange,endRange) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x96695E368AD855F3)
@@ -951,11 +984,10 @@ function GetRainLevel() end
 function GetRandomEventFlag() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x313CE5879CEB6FCD)
----@param startRange number
----@param endRange number
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8098C8D6597AAE18)
+---@param index number
 ---@return number
-function GetRandomFloatInRange(startRange,endRange) end
+function GetReplayStatAtIndex(index) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xD53343AA4FB7DD28)
@@ -974,9 +1006,9 @@ function GetRandomIntInRange(startRange,endRange) end
 function GetRandomIntInRange_2(startRange,endRange) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xDC9274A7EF6B2867)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2B626A0150E4D449)
 ---@return number
-function GetReplayStatCount() end
+function GetReplayStatMissionType() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA09F896CE912481F)
@@ -985,37 +1017,20 @@ function GetReplayStatCount() end
 function GetSizeOfSaveData(p0) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2B5E102E4A42F2BF)
----@return number
-function GetStatusOfMissionRepeatSave() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8098C8D6597AAE18)
----@param index number
----@return number
-function GetReplayStatAtIndex(index) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6856EC3D35C81EA4)
----@return number
-function GetTotalSuccessfulStuntJumps() end
-
---- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xC5868A966E5BE3AE)
 ---@return number
 function GetSnowLevel() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2B626A0150E4D449)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2B5E102E4A42F2BF)
 ---@return number
-function GetReplayStatMissionType() end
+function GetStatusOfMissionRepeatSave() end
 
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF3BBE884A14BB413)
----@param weatherType1 any
----@param weatherType2 any
----@param percentWeather2 number
-function GetWeatherTypeTransition(weatherType1,weatherType2,percentWeather2) end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x17DF68D720AA77F8)
+---@param ped number
+---@return boolean
+function GetTennisSwingAnimComplete(ped) end
 
 --- ```
 --- Hardcoded to always return true.
@@ -1025,15 +1040,68 @@ function GetWeatherTypeTransition(weatherType1,weatherType2,percentWeather2) end
 function HasAsyncInstallFinished() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x17DF68D720AA77F8)
----@param ped number
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1F400FEF721170DA)
+---@return vector3
+function GetWindDirection() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xDC9274A7EF6B2867)
+---@return number
+function GetReplayStatCount() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6856EC3D35C81EA4)
+---@return number
+function GetTotalSuccessfulStuntJumps() end
+
+--- ```
+--- Get inputted "Cheat code", for example:
+--- while (TRUE)
+--- {
+---     if (MISC::_557E43C447E700A8(${fugitive}))
+---     {
+---        // Do something.
+---     }
+---     SYSTEM::WAIT(0);
+--- }
+--- Calling this will also set the last saved string hash to zero.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x557E43C447E700A8)
+---@param hash any
 ---@return boolean
-function GetTennisSwingAnimComplete(ped) end
+function HasCheatStringJustBeenEntered(hash) end
+
+--- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF3BBE884A14BB413)
+---@param weatherType1 any
+---@param weatherType2 any
+---@param percentWeather2 number
+function GetWeatherTypeTransition(weatherType1,weatherType2,percentWeather2) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xDC8C5D7CFEAB8394)
+---@param p0 number
+---@param p1 number
+---@param p2 number
+---@param p3 number
+---@param p4 number
+---@param p5 number
+---@param p6 boolean
+---@param p7 boolean
+---@return boolean
+function HasBulletImpactedInBox(p0,p1,p2,p3,p4,p5,p6,p7) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA8CF1CC0AFCD3F12)
 ---@return number
 function GetWindSpeed() end
+
+--- ```
+--- Hardcoded to return false.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE8B9C0EC9E183F35)
+---@return boolean
+function HasResumedFromSuspend() end
 
 --- ```
 --- p3 - possibly radius?  
@@ -1058,40 +1126,17 @@ function HasBulletImpactedInArea(x,y,z,p3,p4,p5) end
 ---@return boolean
 function HasButtonCombinationJustBeenEntered(hash,amount) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xDC8C5D7CFEAB8394)
----@param p0 number
----@param p1 number
----@param p2 number
----@param p3 number
----@param p4 number
----@param p5 number
----@param p6 boolean
----@param p7 boolean
----@return boolean
-function HasBulletImpactedInBox(p0,p1,p2,p3,p4,p5,p6,p7) end
-
 --- ```
---- Get inputted "Cheat code", for example:
---- while (TRUE)
---- {
----     if (MISC::_557E43C447E700A8(${fugitive}))
----     {
----        // Do something.
----     }
----     SYSTEM::WAIT(0);
+--- if (MISC::IS_AUSSIE_VERSION()) {
+---     sub_127a9(&l_31, 1024); // l_31 |= 1024
+---     l_129 = 3;
+---     sub_129d2("AUSSIE VERSION IS TRUE!?!?!"); // DEBUG
 --- }
---- Calling this will also set the last saved string hash to zero.
+--- Used to block some of the prostitute stuff due to laws in Australia.
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x557E43C447E700A8)
----@param hash any
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x9F1935CA1F724008)
 ---@return boolean
-function HasCheatStringJustBeenEntered(hash) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1F400FEF721170DA)
----@return vector3
-function GetWindDirection() end
+function IsAussieVersion() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x075F1D57402C93BA)
@@ -1104,16 +1149,30 @@ function HaveCreditsReachedEnd() end
 function IgnoreNextRestart(toggle) end
 
 --- ```
---- if (MISC::IS_AUSSIE_VERSION()) {
----     sub_127a9(&l_31, 1024); // l_31 |= 1024
----     l_129 = 3;
----     sub_129d2("AUSSIE VERSION IS TRUE!?!?!"); // DEBUG
---- }
---- Used to block some of the prostitute stuff due to laws in Australia.
+--- Returns bit's boolean state from [offset] of [address].
+--- Example:
+--- MISC::IS_BIT_SET(bitAddress, 1);
+--- To enable and disable bits, see:
+--- MISC::SET_BIT(&bitAddress, 1);   // enable
+--- MISC::CLEAR_BIT(&bitAddress, 1); // disable
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x9F1935CA1F724008)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA921AA820C25702F)
+---@param address number
+---@param offset number
 ---@return boolean
-function IsAussieVersion() end
+function IsBitSet(address,offset) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xDE0F6D7450D37351)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@param ownedByPlayer boolean
+---@return boolean
+function IsBulletInBox(x1,y1,z1,x2,y2,z2,ownedByPlayer) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA61B4DF533DCB56E)
@@ -1133,19 +1192,32 @@ function IsAussieVersion() end
 ---@return boolean
 function IsAreaOccupied(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12) end
 
---- ```
---- Returns bit's boolean state from [offset] of [address].
---- Example:
---- MISC::IS_BIT_SET(bitAddress, 1);
---- To enable and disable bits, see:
---- MISC::SET_BIT(&bitAddress, 1);   // enable
---- MISC::CLEAR_BIT(&bitAddress, 1); // disable
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA921AA820C25702F)
----@param address number
----@param offset number
+--- See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
+--- 
+--- For projectiles, see: [`IS_PROJECTILE_TYPE_IN_ANGLED_AREA`](#\_0xF0BC12401061DEA0)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1A8B5F3C01E2B477)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@param width number
+---@param ownedByPlayer boolean
 ---@return boolean
-function IsBitSet(address,offset) end
+function IsBulletInAngledArea(x1,y1,z1,x2,y2,z2,width,ownedByPlayer) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4D982ADB1978442D)
+---@return boolean
+function IsDurangoVersion() end
+
+--- ```
+--- Returns true if command line option '-benchmark' is set.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA049A5BE0F04F2F8)
+---@return boolean
+function IsCommandLineBenchmarkValueSet() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x69240733738C19A0)
@@ -1162,54 +1234,6 @@ function IsAutoSaveInProgress() end
 ---@return boolean
 function IsBulletInArea(x,y,z,radius,ownedByPlayer) end
 
---- See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
---- 
---- For projectiles, see: [`IS_PROJECTILE_TYPE_IN_ANGLED_AREA`](#\_0xF0BC12401061DEA0)
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1A8B5F3C01E2B477)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param width number
----@param ownedByPlayer boolean
----@return boolean
-function IsBulletInAngledArea(x1,y1,z1,x2,y2,z2,width,ownedByPlayer) end
-
---- ```
---- Hardcoded to return false.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE8B9C0EC9E183F35)
----@return boolean
-function HasResumedFromSuspend() end
-
---- ```
---- Returns true if command line option '-benchmark' is set.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA049A5BE0F04F2F8)
----@return boolean
-function IsCommandLineBenchmarkValueSet() end
-
---- ```
---- This function is hard-coded to always return 0.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7EA2B6AF97ECA6ED)
----@return boolean
-function IsFrontendFading() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xDE0F6D7450D37351)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param ownedByPlayer boolean
----@return boolean
-function IsBulletInBox(x1,y1,z1,x2,y2,z2,ownedByPlayer) end
-
 --- ```
 --- =======================================================  
 --- Correction, I have change this to int, instead of int*  
@@ -1222,21 +1246,27 @@ function IsBulletInBox(x1,y1,z1,x2,y2,z2,ownedByPlayer) end
 ---@return boolean
 function IsIncidentValid(incidentId) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4D982ADB1978442D)
+--- ```
+--- This function is hard-coded to always return 0.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7EA2B6AF97ECA6ED)
 ---@return boolean
-function IsDurangoVersion() end
+function IsFrontendFading() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA72BC0B675B1519E)
+---@return boolean
+function IsOrbisVersion() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x8A75CE2956274ADD)
 ---@return boolean
 function IsMemoryCardInUse() end
 
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2FAA3A30BEC0F25D)
----@param weatherType string
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2B4A15E44DE0F478)
 ---@return boolean
-function IsNextWeatherType(weatherType) end
+function IsMinigameInProgress() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xE54E209C35FFA18D)
@@ -1250,10 +1280,24 @@ function IsNextWeatherType(weatherType) end
 ---@return boolean
 function IsPointObscuredByAMissionEntity(p0,p1,p2,p3,p4,p5,p6) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2B4A15E44DE0F478)
+--- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2FAA3A30BEC0F25D)
+---@param weatherType string
 ---@return boolean
-function IsMinigameInProgress() end
+function IsNextWeatherType(weatherType) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x48AF36444B965238)
+---@return boolean
+function IsPcVersion() end
+
+--- ```
+--- NativeDB Introduced: v1290
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1312F4B242609CE3)
+---@param id number
+---@return boolean
+function IsPopMultiplierAreaUnk(id) end
 
 --- The BOOL parameters that are documented have not been confirmed. They are just documented from what I've found during testing. They may not work as expected in all cases.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xADCDE75E1C60F32D)
@@ -1271,10 +1315,12 @@ function IsMinigameInProgress() end
 ---@return boolean
 function IsPositionOccupied(x,y,z,range,p4,checkVehicles,checkPeds,p7,p8,ignoreEntity,p10) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA72BC0B675B1519E)
+--- ```
+--- aka "constrained"
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x684A41975F077262)
 ---@return boolean
-function IsOrbisVersion() end
+function IsInPowerSavingMode() end
 
 --- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x44F28F86433B10A9)
@@ -1282,18 +1328,35 @@ function IsOrbisVersion() end
 ---@return boolean
 function IsPrevWeatherType(weatherType) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x48AF36444B965238)
+--- ```
+--- Determines whether there is a projectile within the specified coordinates. The coordinates form a rectangle.  
+--- ownedByPlayer = only projectiles fired by the player will be detected.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x5270A8FBC098C3F8)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@param ownedByPlayer boolean
 ---@return boolean
-function IsPcVersion() end
+function IsProjectileInArea(x1,y1,z1,x2,y2,z2,ownedByPlayer) end
 
 --- ```
---- NativeDB Introduced: v1290
+--- Determines whether there is a projectile of a specific type within the specified coordinates. The coordinates form a axis-aligned bounding box.  
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1312F4B242609CE3)
----@param id number
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2E0DC353342C4A6D)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@param type number
+---@param ownedByPlayer boolean
 ---@return boolean
-function IsPopMultiplierAreaUnk(id) end
+function IsProjectileTypeInArea(x1,y1,z1,x2,y2,z2,type,ownedByPlayer) end
 
 --- See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
 --- 
@@ -1314,60 +1377,10 @@ function IsPopMultiplierAreaUnk(id) end
 ---@return boolean
 function IsProjectileTypeInAngledArea(x1,y1,z1,x2,y2,z2,width,p7,weaponHash,ownedByPlayer) end
 
---- ```
---- Determines whether there is a projectile of a specific type within the specified coordinates. The coordinates form a axis-aligned bounding box.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2E0DC353342C4A6D)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param type number
----@param ownedByPlayer boolean
----@return boolean
-function IsProjectileTypeInArea(x1,y1,z1,x2,y2,z2,type,ownedByPlayer) end
-
---- ```
---- Determines whether there is a projectile within the specified coordinates. The coordinates form a rectangle.  
---- ownedByPlayer = only projectiles fired by the player will be detected.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x5270A8FBC098C3F8)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param ownedByPlayer boolean
----@return boolean
-function IsProjectileInArea(x1,y1,z1,x2,y2,z2,ownedByPlayer) end
-
---- ```
---- aka "constrained"
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x684A41975F077262)
----@return boolean
-function IsInPowerSavingMode() end
-
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x34318593248C8FB2)
----@param x number
----@param y number
----@param z number
----@param projHash any
----@param radius number
----@param ownedByPlayer boolean
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xCCA1072C29D096C2)
 ---@return boolean
-function IsProjectileTypeWithinDistance(x,y,z,projHash,radius,ownedByPlayer) end
-
---- ```
---- This function is hard-coded to always return 0.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x61A23B7EDA9BDA24)
----@return boolean
-function IsSniperInverted() end
+function IsPs3Version() end
 
 --- ```
 --- Determines whether there is a sniper bullet within the specified coordinates. The coordinates form an axis-aligned bounding box.  
@@ -1383,10 +1396,27 @@ function IsSniperInverted() end
 function IsSniperBulletInArea(x1,y1,z1,x2,y2,z2) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF22B6C47C6EAB066)
----@param string string
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x34318593248C8FB2)
+---@param x number
+---@param y number
+---@param z number
+---@param projHash any
+---@param radius number
+---@param ownedByPlayer boolean
 ---@return boolean
-function IsStringNull(string) end
+function IsProjectileTypeWithinDistance(x,y,z,projHash,radius,ownedByPlayer) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2272B0A1343129F4)
+---@return boolean
+function IsStuntJumpMessageShowing() end
+
+--- ```
+--- This function is hard-coded to always return 0.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x61A23B7EDA9BDA24)
+---@return boolean
+function IsSniperInverted() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xCA042B6957743895)
@@ -1395,38 +1425,15 @@ function IsStringNull(string) end
 function IsStringNullOrEmpty(string) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2272B0A1343129F4)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF22B6C47C6EAB066)
+---@param string string
 ---@return boolean
-function IsStuntJumpMessageShowing() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7B30F65D7B710098)
----@return boolean
-function IsThisAMinigameScript() end
+function IsStringNull(string) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xF6201B4DAF662A9D)
 ---@return boolean
 function IsXbox360Version() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7A3F19700A4D0525)
----@return boolean
-function IsStuntJumpInProgress() end
-
---- ```
---- Found in the scripts:
---- MISC::_02DEAAC8F8EA7FE7("");
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x02DEAAC8F8EA7FE7)
----@param p0 string
-function N_0x02deaac8f8ea7fe7(p0) end
-
---- ```
---- CLEAR_*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x06462A961E94B67C)
-function N_0x06462a961e94b67c() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x5D5479D115290C3F)
@@ -1440,6 +1447,11 @@ function IsTennisMode(ped) end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x3BBBD13E5041A79E)
 ---@return boolean
 function LandingMenuIsActive() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7B30F65D7B710098)
+---@return boolean
+function IsThisAMinigameScript() end
 
 --- ```
 --- The following cloudhats are useable:
@@ -1470,14 +1482,17 @@ function LandingMenuIsActive() end
 function LoadCloudHat(name,transitionTime) end
 
 --- ```
---- 0 as param = weird black and green screen
---- 0.1 - 0.99 = Prevent rain effect from falling (still sound and effects on puddles) and prevent puddles from increase/decrease, seems than it prevent any weather change too
---- 1 and more = "Unfreeze" rain puddles but clear weather too
---- When 'freezing' is enabled, it seem to also freeze value getted with GetRainLevel
+--- Found in the scripts:
+--- MISC::_02DEAAC8F8EA7FE7("");
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x0CF97F497FE7D048)
----@param p0 number
-function N_0x0cf97f497fe7d048(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x02DEAAC8F8EA7FE7)
+---@param p0 string
+function N_0x02deaac8f8ea7fe7(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7A3F19700A4D0525)
+---@return boolean
+function IsStuntJumpInProgress() end
 
 --- ```
 --- NativeDB Introduced: v2189
@@ -1488,12 +1503,14 @@ function N_0x0cf97f497fe7d048(p0) end
 function N_0x1178e104409fe58c(p0,p1) end
 
 --- ```
---- GET_TENNIS_*; references 0xFBFEC0E9 = interruptswing
+--- 0 as param = weird black and green screen
+--- 0.1 - 0.99 = Prevent rain effect from falling (still sound and effects on puddles) and prevent puddles from increase/decrease, seems than it prevent any weather change too
+--- 1 and more = "Unfreeze" rain puddles but clear weather too
+--- When 'freezing' is enabled, it seem to also freeze value getted with GetRainLevel
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x19BFED045C647C49)
----@param ped number
----@return boolean
-function N_0x19bfed045c647c49(ped) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x0CF97F497FE7D048)
+---@param p0 number
+function N_0x0cf97f497fe7d048(p0) end
 
 --- ```
 --- Unsure about the use of this native but here's an example:
@@ -1515,6 +1532,14 @@ function N_0x19bfed045c647c49(ped) end
 ---@param p0 number
 ---@param p1 boolean
 function N_0x1eae0a6e978894a2(p0,p1) end
+
+--- ```
+--- GET_TENNIS_*; references 0xFBFEC0E9 = interruptswing
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x19BFED045C647C49)
+---@param ped number
+---@return boolean
+function N_0x19bfed045c647c49(ped) end
 
 --- ```
 --- GET_C*
@@ -1544,6 +1569,28 @@ function N_0x21c235bc64831e5a(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9) end
 function N_0x1bb299305c3e8c13(p0,p1,p2,p3) end
 
 --- ```
+--- CLEAR_*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x06462A961E94B67C)
+function N_0x06462a961e94b67c() end
+
+--- **This native does absolutely nothing, just a nullsub**
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x31125FD509D9043F)
+---@param p0 any
+function N_0x31125fd509d9043f(p0) end
+
+--- ```
+--- Only found 3 times in decompiled scripts. Not a whole lot to go off of.
+--- MISC::_48F069265A0E4BEC(a_0, "Movie_Name_For_This_Player");
+--- MISC::_48F069265A0E4BEC(&a_0._fB, "Ringtone_For_This_Player");
+--- MISC::_48F069265A0E4BEC(&a_0._f1EC4._f12[v_A/*6*/], &v_13); // where v_13 is "MPATMLOGSCRS0" thru "MPATMLOGSCRS15"
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x48F069265A0E4BEC)
+---@param p0 any
+---@param name string
+function N_0x48f069265a0e4bec(p0,name) end
+
+--- ```
 --- HAS_*
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x2107A3773771186D)
@@ -1553,34 +1600,6 @@ function N_0x2107a3773771186d() end
 --- **This native does absolutely nothing, just a nullsub**
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x23227DF0B2115469)
 function N_0x23227df0b2115469() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x397BAA01068BAA96)
----@return number
-function N_0x397baa01068baa96() end
-
---- **This native does absolutely nothing, just a nullsub**
---- [Native Documentation](https://docs.fivem.net/natives/?_0x31125FD509D9043F)
----@param p0 any
-function N_0x31125fd509d9043f(p0) end
-
---- **This native does absolutely nothing, just a nullsub**
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4DCDF92BF64236CD)
----@param p0 string
----@param p1 string
-function N_0x4dcdf92bf64236cd(p0,p1) end
-
---- ```
---- From the scripts:
---- MISC::_54F157E0336A3822(sub_aa49(a_0), "ForcedStopDirection", v_E);
---- Related to tennis mode.
---- SET_*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x54F157E0336A3822)
----@param ped number
----@param p1 string
----@param p2 number
-function N_0x54f157e0336a3822(ped,p1,p2) end
 
 --- ```
 --- NativeDB Introduced: v1868
@@ -1602,35 +1621,28 @@ function N_0x54f157e0336a3822(ped,p1,p2) end
 ---@return any
 function N_0x39455bf4f4f55186(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12) end
 
---- ```
---- Only found 3 times in decompiled scripts. Not a whole lot to go off of.
---- MISC::_48F069265A0E4BEC(a_0, "Movie_Name_For_This_Player");
---- MISC::_48F069265A0E4BEC(&a_0._fB, "Ringtone_For_This_Player");
---- MISC::_48F069265A0E4BEC(&a_0._f1EC4._f12[v_A/*6*/], &v_13); // where v_13 is "MPATMLOGSCRS0" thru "MPATMLOGSCRS15"
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x48F069265A0E4BEC)
----@param p0 any
----@param name string
-function N_0x48f069265a0e4bec(p0,name) end
-
---- ```
---- Sets bit 3 in GtaThread+0x150
---- 
---- SET_T*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6F2135B6129620C1)
----@param toggle boolean
-function N_0x6f2135b6129620c1(toggle) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xCCA1072C29D096C2)
----@return boolean
-function IsPs3Version() end
-
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x5B1F2E327B6B6FE1)
 ---@return any
 function N_0x5b1f2e327b6b6fe1() end
+
+--- **This native does absolutely nothing, just a nullsub**
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4DCDF92BF64236CD)
+---@param p0 string
+---@param p1 string
+function N_0x4dcdf92bf64236cd(p0,p1) end
+
+--- ```
+--- From the scripts:
+--- MISC::_54F157E0336A3822(sub_aa49(a_0), "ForcedStopDirection", v_E);
+--- Related to tennis mode.
+--- SET_*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x54F157E0336A3822)
+---@param ped number
+---@param p1 string
+---@param p2 number
+function N_0x54f157e0336a3822(ped,p1,p2) end
 
 --- ```
 --- Sets GtaThread+0x14A
@@ -1641,24 +1653,32 @@ function N_0x5b1f2e327b6b6fe1() end
 ---@param toggle boolean
 function N_0x65d2ebb47e1cec21(toggle) end
 
+--- ```
+--- Sets bit 3 in GtaThread+0x150
+--- 
+--- SET_T*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6F2135B6129620C1)
+---@param toggle boolean
+function N_0x6f2135b6129620c1(toggle) end
+
+--- ```
+--- HAS_*
+--- Probably something like "has game been started for the first time".
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6FDDF453C0C756EC)
+---@return boolean
+function N_0x6fddf453c0c756ec() end
+
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x693478ACBD7F18E7)
-function N_0x693478acbd7f18e7() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x397BAA01068BAA96)
+---@return number
+function N_0x397baa01068baa96() end
 
 --- **This native does absolutely nothing, just a nullsub**
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x703CC7F60CBB2B57)
 ---@param p0 any
 function N_0x703cc7f60cbb2b57(p0) end
-
---- ```
---- Only found 2 times in decompiled scripts. Not a whole lot to go off of.
---- MISC::_8269816F6CFD40F8(&a_0._f1F5A._f6[0/*8*/], "TEMPSTAT_LABEL"); // gets saved in a struct called "g_SaveData_STRING_ScriptSaves"
---- MISC::_8269816F6CFD40F8(&a_0._f4B4[v_1A/*8*/], &v_5); // where v_5 is "Name0" thru "Name9", gets saved in a struct called "OUTFIT_Name"
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8269816F6CFD40F8)
----@param p0 any
----@param name string
-function N_0x8269816f6cfd40f8(p0,name) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x7F8F6405F4777AF6)
@@ -1676,6 +1696,16 @@ function N_0x8269816f6cfd40f8(p0,name) end
 function N_0x7f8f6405f4777af6(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9) end
 
 --- ```
+--- Only found 2 times in decompiled scripts. Not a whole lot to go off of.
+--- MISC::_8269816F6CFD40F8(&a_0._f1F5A._f6[0/*8*/], "TEMPSTAT_LABEL"); // gets saved in a struct called "g_SaveData_STRING_ScriptSaves"
+--- MISC::_8269816F6CFD40F8(&a_0._f4B4[v_1A/*8*/], &v_5); // where v_5 is "Name0" thru "Name9", gets saved in a struct called "OUTFIT_Name"
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8269816F6CFD40F8)
+---@param p0 any
+---@param name string
+function N_0x8269816f6cfd40f8(p0,name) end
+
+--- ```
 --- Possibly used to clear scenario points.
 --- 
 --- CLEAR_*
@@ -1684,26 +1714,15 @@ function N_0x7f8f6405f4777af6(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9) end
 function N_0x7ec6f9a478a6a512() end
 
 --- ```
---- HAS_*
---- Probably something like "has game been started for the first time".
+--- I*
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6FDDF453C0C756EC)
----@return boolean
-function N_0x6fddf453c0c756ec() end
-
---- Does nothing (it's a nullsub). Seems to be PS4 specific.
---- 
---- ```
---- NativeDB Introduced: v2060
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x916CA67D26FD1E37)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8D74E26F54B4E5C3)
 ---@param p0 string
-function N_0x916ca67d26fd1e37(p0) end
+function N_0x8d74e26f54b4e5c3(p0) end
 
---- **This native does absolutely nothing, just a nullsub**
---- [Native Documentation](https://docs.fivem.net/natives/?_0x97E7E2C04245115B)
----@param p0 any
-function N_0x97e7e2c04245115b(p0) end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x693478ACBD7F18E7)
+function N_0x693478acbd7f18e7() end
 
 --- **This native does absolutely nothing, just a nullsub**
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x8951EB9C6906D3C8)
@@ -1721,6 +1740,11 @@ function N_0x8951eb9c6906d3c8() end
 ---@param p3 boolean
 ---@return boolean
 function N_0xa4a0065e39c9f25c(p0,p1,fadeInAfterLoad,p3) end
+
+--- **This native does absolutely nothing, just a nullsub**
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x97E7E2C04245115B)
+---@param p0 any
+function N_0x97e7e2c04245115b(p0) end
 
 --- ```
 --- NativeDB Introduced: v2189
@@ -1743,12 +1767,14 @@ function N_0xa4a0065e39c9f25c(p0,p1,fadeInAfterLoad,p3) end
 ---@return any
 function N_0xa0ad167e4b39d9a2(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13) end
 
+--- Does nothing (it's a nullsub). Seems to be PS4 specific.
+--- 
 --- ```
---- I*
+--- NativeDB Introduced: v2060
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8D74E26F54B4E5C3)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x916CA67D26FD1E37)
 ---@param p0 string
-function N_0x8d74e26f54b4e5c3(p0) end
+function N_0x916ca67d26fd1e37(p0) end
 
 --- **This native does absolutely nothing, just a nullsub**
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xBA4B8D83BDC75551)
@@ -1771,12 +1797,6 @@ function N_0xd10282b6e3751ba0() end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xE3D969D2785FFB5E)
 function N_0xe3d969d2785ffb5e() end
 
---- ```
---- RESET_*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xD9F692D349249528)
-function N_0xd9f692d349249528() end
-
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xD642319C54AADEB6)
 ---@return any
@@ -1788,14 +1808,6 @@ function N_0xd642319c54aadeb6() end
 ---@param p1 any
 function N_0xeb078ca2b5e82add(p0,p1) end
 
---- ```
---- SET_*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE532EC1A63231B4F)
----@param p0 number
----@param p1 number
-function N_0xe532ec1a63231b4f(p0,p1) end
-
 --- Related to tennis mode. Checks for `0x0FCED5ADF = swung`
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xE95B0C7D5BA3B96B)
 ---@param ped number
@@ -1803,11 +1815,18 @@ function N_0xe532ec1a63231b4f(p0,p1) end
 function N_0xe95b0c7d5ba3b96b(ped) end
 
 --- ```
---- NativeDB Introduced: v2060
+--- RESET_*
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xFA3FFB0EEBC288A3)
----@param p0 boolean
-function N_0xfa3ffb0eebc288a3(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xD9F692D349249528)
+function N_0xd9f692d349249528() end
+
+--- ```
+--- SET_*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE532EC1A63231B4F)
+---@param p0 number
+---@param p1 number
+function N_0xe532ec1a63231b4f(p0,p1) end
 
 --- **This native does absolutely nothing, just a nullsub**
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xEBD3205A207939ED)
@@ -1832,14 +1851,12 @@ function N_0xebd3205a207939ed(p0) end
 ---@return boolean
 function N_0xf56dfb7b61be7276(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xFB00CA71DA386228)
-function N_0xfb00ca71da386228() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xEB2104E905C6F2E9)
----@return any
-function N_0xeb2104e905c6f2e9() end
+--- ```
+--- NativeDB Introduced: v2060
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xFA3FFB0EEBC288A3)
+---@param p0 boolean
+function N_0xfa3ffb0eebc288a3(p0) end
 
 --- ```
 --- Another unknown label type...
@@ -1860,8 +1877,13 @@ function N_0xeb2104e905c6f2e9() end
 function N_0xfaa457ef263e8763(p0,name) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x9243BAC96D64C050)
-function NetworkSetScriptIsSafeForNetworkGame() end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xFB00CA71DA386228)
+function N_0xfb00ca71da386228() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xEB2104E905C6F2E9)
+---@return any
+function N_0xeb2104e905c6f2e9() end
 
 --- ```
 --- Toggles some stunt jump stuff.
@@ -1870,10 +1892,28 @@ function NetworkSetScriptIsSafeForNetworkGame() end
 ---@param toggle boolean
 function N_0xfb80ab299d2ee1bd(toggle) end
 
+--- ```
+--- p0 was always 2 in R* scripts.
+--- Called before calling DISPLAY_ONSCREEN_KEYBOARD if the input needs to be saved.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x3ED1438C1F5C6612)
+---@param p0 number
+function NextOnscreenKeyboardResultWillDisplayUsingTheseFonts(p0) end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x2C2B3493FBF51C71)
 ---@param toggle boolean
 function PauseDeathArrestRestart(toggle) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE266ED23311F24D4)
+---@param ped number
+---@param animDict string
+---@param animName string
+---@param p3 number
+---@param p4 number
+---@param p5 boolean
+function PlayTennisSwingAnim(ped,animDict,animName,p3,p4,p5) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x1162EA8AE9D24EEA)
@@ -1888,6 +1928,12 @@ function PauseDeathArrestRestart(toggle) end
 ---@return boolean
 function OverrideSaveHouse(p0,p1,p2,p3,p4,p5,p6,p7) end
 
+--- ```
+--- spawns a few distant/out-of-sight peds, vehicles, animals etc each time it is called  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7472BB270D7B4F3E)
+function PopulateNow() end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x8FA9C42FC5D7C64B)
 ---@param ped number
@@ -1899,39 +1945,8 @@ function OverrideSaveHouse(p0,p1,p2,p3,p4,p5,p6,p7) end
 function PlayTennisDiveAnim(ped,p1,p2,p3,p4,p5) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE266ED23311F24D4)
----@param ped number
----@param animDict string
----@param animName string
----@param p3 number
----@param p4 number
----@param p5 boolean
-function PlayTennisSwingAnim(ped,animDict,animName,p3,p4,p5) end
-
---- ```
---- spawns a few distant/out-of-sight peds, vehicles, animals etc each time it is called  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7472BB270D7B4F3E)
-function PopulateNow() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x72DE52178C291CB5)
----@return boolean
-function QueueMissionRepeatLoad() end
-
---- ```
---- p0 was always 2 in R* scripts.
---- Called before calling DISPLAY_ONSCREEN_KEYBOARD if the input needs to be saved.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x3ED1438C1F5C6612)
----@param p0 number
-function NextOnscreenKeyboardResultWillDisplayUsingTheseFonts(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xC8F4131414C835A1)
----@param p0 any
----@param name string
-function RegisterBoolToSave(p0,name) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x9243BAC96D64C050)
+function NetworkSetScriptIsSafeForNetworkGame() end
 
 --- ```
 --- Found in the scripts:
@@ -1947,21 +1962,21 @@ function PreloadCloudHat(name) end
 function QueueMissionRepeatSave() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xEDB1232C5BEAE62F)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xC8F4131414C835A1)
 ---@param p0 any
 ---@param name string
-function RegisterTextLabelToSave(p0,name) end
+function RegisterBoolToSave(p0,name) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x72DE52178C291CB5)
+---@return boolean
+function QueueMissionRepeatLoad() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x7CAEC29ECB5DFEBB)
 ---@param p0 any
 ---@param name string
 function RegisterFloatToSave(p0,name) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x264AC28B01B353A5)
----@param p0 any
-function RemoveDispatchSpawnBlockingArea(p0) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x10C2FA78D0E128A1)
@@ -1974,12 +1989,6 @@ function RegisterEnumToSave(p0,name) end
 ---@param p0 any
 ---@param name string
 function RegisterInt64ToSave(p0,name) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE6869BECDD8F2403)
----@param id number
----@param p1 boolean
-function RemovePopMultiplierSphere(id,p1) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xC0714D0A7EEECA54)
@@ -2006,16 +2015,28 @@ function RegisterSaveHouse(p0,p1,p2,p3,p4,p5,p6) end
 function RegisterTextLabelToSave_2(p0,name) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x34C9EE5986258415)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xEDB1232C5BEAE62F)
 ---@param p0 any
 ---@param name string
-function RegisterIntToSave(p0,name) end
+function RegisterTextLabelToSave(p0,name) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xB129E447A2EDA4BF)
 ---@param id number
 ---@param p1 boolean
 function RemovePopMultiplierArea(id,p1) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x34C9EE5986258415)
+---@param p0 any
+---@param name string
+function RegisterIntToSave(p0,name) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE6869BECDD8F2403)
+---@param id number
+---@param p1 boolean
+function RemovePopMultiplierSphere(id,p1) end
 
 --- ```
 --- Appears to remove stealth kill action from memory
@@ -2025,15 +2046,34 @@ function RemovePopMultiplierArea(id,p1) end
 ---@param p1 boolean
 function RemoveStealthKill(hash,p1) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x77A84429DD9F0A15)
-function ResetDispatchIdealSpawnDistance() end
-
 --- ```
 --- Begins with RESET_*. Next character in the name is either D or E.
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x437138B6A830166A)
 function ResetBenchmarkRecording() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xAC7BFD5C1D83EA75)
+function ResetDispatchSpawnBlockingAreas() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x264AC28B01B353A5)
+---@param p0 any
+function RemoveDispatchSpawnBlockingArea(p0) end
+
+--- ```
+--- NativeDB Introduced: v1868
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x5896F2BD5683A4E1)
+function ResetDispatchSpawnLocation() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x77A84429DD9F0A15)
+function ResetDispatchIdealSpawnDistance() end
+
+--- In singleplayer it does exactly what the name implies. In FiveM / GTA:Online it shows `Disconnecting from GTA Online` HUD and then quits the game.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE574A662ACAEFBB1)
+function RestartGame() end
 
 --- ```
 --- NativeDB Introduced: v323
@@ -2042,32 +2082,11 @@ function ResetBenchmarkRecording() end
 ---@param p0 any
 function ResetDispatchTimeBetweenSpawnAttempts(p0) end
 
---- In singleplayer it does exactly what the name implies. In FiveM / GTA:Online it shows `Disconnecting from GTA Online` HUD and then quits the game.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE574A662ACAEFBB1)
-function RestartGame() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xAC7BFD5C1D83EA75)
-function ResetDispatchSpawnBlockingAreas() end
-
 --- ```
 --- Saves the benchmark recording to %USERPROFILE%\Documents\Rockstar Games\GTA V\Benchmarks and submits some metrics.
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x37DEB0AA183FB6D8)
 function SaveBenchmarkRecording() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8EF5573A1F801A5C)
----@param player any
----@param p1 number
----@param p2 number
----@return boolean
-function ScriptRaceGetPlayerSplitTime(player,p1,p2) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x438822C279B73B93)
----@param player any
-function SetBeastModeActive(player) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x0A60017F841A54F2)
@@ -2078,13 +2097,12 @@ function SetBeastModeActive(player) end
 function ScriptRaceInit(p0,p1,p2,p3) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1FF6BF9A63E5757F)
-function ScriptRaceShutdown() end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB938B7E6D3C0620C)
----@param toggle boolean
-function SetCreditsActive(toggle) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8EF5573A1F801A5C)
+---@param player any
+---@param p1 number
+---@param p2 number
+---@return boolean
+function ScriptRaceGetPlayerSplitTime(player,p1,p2) end
 
 --- ```
 --- This sets bit [offset] of [address] to on.
@@ -2101,9 +2119,8 @@ function SetCreditsActive(toggle) end
 function SetBit(address,offset) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x6FE601A64180D423)
----@param p0 number
-function SetDispatchIdealSpawnDistance(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1FF6BF9A63E5757F)
+function ScriptRaceShutdown() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x8EF07E15701D61ED)
@@ -2113,16 +2130,26 @@ function SetDispatchIdealSpawnDistance(p0) end
 ---@param p3 number
 function SetBitsInRange(var,rangeStart,rangeEnd,p3) end
 
---- ```
---- NativeDB Introduced: v1868
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x5896F2BD5683A4E1)
-function ResetDispatchSpawnLocation() end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x438822C279B73B93)
+---@param player any
+function SetBeastModeActive(player) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xF36199225D6D8C86)
 ---@param opacity number
 function SetCloudHatOpacity(opacity) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x6FE601A64180D423)
+---@param p0 number
+function SetDispatchIdealSpawnDistance(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x44F7CBC1BEB3327D)
+---@param p0 any
+---@param p1 number
+function SetDispatchTimeBetweenSpawnAttempts(p0,p1) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xD10F442036302D50)
@@ -2138,15 +2165,14 @@ function SetDispatchSpawnLocation(x,y,z) end
 function SetDispatchTimeBetweenSpawnAttemptsMultiplier(p0,p1) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA66C71C98D5F2CFB)
+---@param player any
+function SetExplosiveAmmoThisFrame(player) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xFF1BED81BFDC0FE0)
 ---@param player any
 function SetExplosiveMeleeThisFrame(player) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x44F7CBC1BEB3327D)
----@param p0 any
----@param p1 number
-function SetDispatchTimeBetweenSpawnAttempts(p0,p1) end
 
 --- ```
 --- Sets whether the game should fade in after the player dies or is arrested.  
@@ -2155,23 +2181,17 @@ function SetDispatchTimeBetweenSpawnAttempts(p0,p1) end
 ---@param toggle boolean
 function SetFadeInAfterDeathArrest(toggle) end
 
+--- ```
+--- Sets whether the game should fade out after the player dies.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4A18E01DF2C87B86)
+---@param toggle boolean
+function SetFadeOutAfterDeath(toggle) end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xF3D78F59DFE18D79)
 ---@param toggle boolean
 function SetFadeInAfterLoad(toggle) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA66C71C98D5F2CFB)
----@param player any
-function SetExplosiveAmmoThisFrame(player) end
-
---- ```
---- Sets a visually fake wanted level on the user interface. Used by Rockstar's scripts to "override" regular wanted levels and make custom ones while the real wanted level and multipliers are still in effect.
---- Max is 6, anything above this makes it just 6. Also the mini-map gets the red & blue flashing effect.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1454F2448DE30163)
----@param fakeWantedLevel number
-function SetFakeWantedLevel(fakeWantedLevel) end
 
 --- ```
 --- Sets whether the game should fade out after the player is arrested.  
@@ -2181,6 +2201,19 @@ function SetFakeWantedLevel(fakeWantedLevel) end
 function SetFadeOutAfterArrest(toggle) end
 
 --- ```
+--- Sets a visually fake wanted level on the user interface. Used by Rockstar's scripts to "override" regular wanted levels and make custom ones while the real wanted level and multipliers are still in effect.
+--- Max is 6, anything above this makes it just 6. Also the mini-map gets the red & blue flashing effect.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1454F2448DE30163)
+---@param fakeWantedLevel number
+function SetFakeWantedLevel(fakeWantedLevel) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x11879CDD803D30F4)
+---@param player any
+function SetFireAmmoThisFrame(player) end
+
+--- ```
 --- NativeDB Introduced: v1180
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA1183BCFEE0F93D1)
@@ -2188,11 +2221,30 @@ function SetFadeOutAfterArrest(toggle) end
 function SetForcePlayerToJump(player) end
 
 --- ```
---- Sets whether the game should fade out after the player dies.  
+--- level can be from 0 to 3  
+--- 0: 9.8   
+--- 1: 2.4   
+--- 2: 0.1 - very low  
+--- 3: 0.0  
 --- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4A18E01DF2C87B86)
----@param toggle boolean
-function SetFadeOutAfterDeath(toggle) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x740E14FAD5842351)
+---@param level number
+function SetGravityLevel(level) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB08B85D860E7BA3C)
+---@param incidentId number
+---@param dispatchService number
+---@param numUnits number
+function SetIncidentRequestedUnits(incidentId,dispatchService,numUnits) end
+
+--- ```
+--- SET_INCIDENT_*
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xD261BA3E7E998072)
+---@param incidentId number
+---@param p1 number
+function SetIncidentUnk(incidentId,p1) end
 
 --- ```
 --- Make sure to call this from the correct thread if you're using multiple threads because all other threads except the one which is calling SET_GAME_PAUSED will be paused which means you will lose control and the game remains in paused mode until you exit GTA5.exe  
@@ -2208,42 +2260,6 @@ function SetGamePaused(toggle) end
 ---@param flag number
 function SetInstancePriorityHint(flag) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB08B85D860E7BA3C)
----@param incidentId number
----@param dispatchService number
----@param numUnits number
-function SetIncidentRequestedUnits(incidentId,dispatchService,numUnits) end
-
---- ```
---- level can be from 0 to 3  
---- 0: 9.8   
---- 1: 2.4   
---- 2: 0.1 - very low  
---- 3: 0.0  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x740E14FAD5842351)
----@param level number
-function SetGravityLevel(level) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x11879CDD803D30F4)
----@param player any
-function SetFireAmmoThisFrame(player) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x19E00D7322C6F85B)
----@param toggle boolean
-function SetMinigameInProgress(toggle) end
-
---- ```
---- SET_INCIDENT_*
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xD261BA3E7E998072)
----@param incidentId number
----@param p1 number
-function SetIncidentUnk(incidentId,p1) end
-
 --- ```
 --- If true, the player can't save the game.   
 --- If the parameter is true, sets the mission flag to true, if the parameter is false, the function does nothing at all.  
@@ -2253,15 +2269,33 @@ function SetIncidentUnk(incidentId,p1) end
 ---@param toggle boolean
 function SetMissionFlag(toggle) end
 
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xA43D5C6FE51ADBEF)
----@param weatherType string
-function SetOverrideWeather(weatherType) end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB938B7E6D3C0620C)
+---@param toggle boolean
+function SetCreditsActive(toggle) end
 
 --- Sets the maximum prop density and changes a loading screen flag from 'loading story mode' to 'loading GTA Online'. It causes a loading screen to show as it reloads map data.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x9BAE5AD2508DF078)
 ---@param toggle number
 function SetInstancePriorityMode(toggle) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x19E00D7322C6F85B)
+---@param toggle boolean
+function SetMinigameInProgress(toggle) end
+
+--- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xA43D5C6FE51ADBEF)
+---@param weatherType string
+function SetOverrideWeather(weatherType) end
+
+--- ```
+--- If toggle is true, the ped's head is shown in the pause menu
+--- If toggle is false, the ped's head is not shown in the pause menu
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x4EBB7E87AA0DBED4)
+---@param toggle boolean
+function SetPlayerIsInAnimalForm(toggle) end
 
 --- Controls rain, rain sounds and the creation of puddles.
 --- 
@@ -2282,14 +2316,6 @@ function SetRainLevel(level) end
 function SetPlayerRockstarEditorDisabled(toggle) end
 
 --- ```
---- If toggle is true, the ped's head is shown in the pause menu
---- If toggle is false, the ped's head is not shown in the pause menu
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x4EBB7E87AA0DBED4)
----@param toggle boolean
-function SetPlayerIsInAnimalForm(toggle) end
-
---- ```
 --- If the parameter is true, sets the random event flag to true, if the parameter is false, the function does nothing at all.  
 --- Does nothing if the mission flag is set.  
 --- ```
@@ -2297,12 +2323,10 @@ function SetPlayerIsInAnimalForm(toggle) end
 ---@param toggle boolean
 function SetRandomEventFlag(toggle) end
 
---- ```
---- Activates (usused?) riot mode. All NPCs are being hostile to each other (including player). Also the game will give weapons (pistols, smgs) to random NPCs.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x2587A48BC88DFADF)
----@param toggle boolean
-function SetRiotModeEnabled(toggle) end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x444D98F98C11F3EC)
+---@param seed number
+function SetRandomSeed(seed) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x706B5EDCAA7FA663)
@@ -2312,10 +2336,14 @@ function SetRiotModeEnabled(toggle) end
 ---@param heading number
 function SetRestartCustomPosition(x,y,z,heading) end
 
+--- Activates riot mode. All NPCs are being hostile to each other (including player). Also the game will give weapons (pistols, smgs) to random NPCs.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x2587A48BC88DFADF)
+---@param toggle boolean
+function SetRiotModeEnabled(toggle) end
+
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x444D98F98C11F3EC)
----@param seed number
-function SetRandomSeed(seed) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x8B05F884CF7E8020)
+function SetRandomWeatherType() end
 
 --- ```
 --- ignoreVehicle - bypasses vehicle check of the local player (it will not open if you are in a vehicle and this is set to false)
@@ -2323,13 +2351,6 @@ function SetRandomSeed(seed) end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xC9BF75D28165FF77)
 ---@param ignoreVehicle boolean
 function SetSaveMenuActive(ignoreVehicle) end
-
---- ```
---- NativeDB Introduced: v1868
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7F06937B0CDCBC1A)
----@param level number
-function SetSnowLevel(level) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x4F548CABEAE553BC)
@@ -2339,9 +2360,9 @@ function SetSnowLevel(level) end
 function SetSaveHouse(p0,p1,p2) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x57FFF03E423A4C0B)
----@param player any
-function SetSuperJumpThisFrame(player) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xAA391C728106F7AF)
+---@param toggle boolean
+function SetThisScriptCanBePaused(toggle) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xD79185689F8FD5DF)
@@ -2352,6 +2373,24 @@ function SetStuntJumpsCanTrigger(toggle) end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xB98236CAAECEF897)
 ---@param toggle boolean
 function SetThisScriptCanRemoveBlipsCreatedByAnyScript(toggle) end
+
+--- ```
+--- NativeDB Introduced: v1868
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7F06937B0CDCBC1A)
+---@param level number
+function SetSnowLevel(level) end
+
+--- ```
+--- Maximum value is 1.  
+--- At a value of 0 the game will still run at a minimum time scale.  
+--- Slow Motion 1: 0.6  
+--- Slow Motion 2: 0.4  
+--- Slow Motion 3: 0.2  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1D408577D440E81E)
+---@param timeScale number
+function SetTimeScale(timeScale) end
 
 --- ```
 --- // timecycle_keyframe_data
@@ -2375,44 +2414,26 @@ function SetThisScriptCanRemoveBlipsCreatedByAnyScript(toggle) end
 ---@param weatherType string
 function SetWeatherTypeNow(weatherType) end
 
---- ```
---- Maximum value is 1.  
---- At a value of 0 the game will still run at a minimum time scale.  
---- Slow Motion 1: 0.6  
---- Slow Motion 2: 0.4  
---- Slow Motion 3: 0.2  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1D408577D440E81E)
----@param timeScale number
-function SetTimeScale(timeScale) end
-
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xAA391C728106F7AF)
----@param toggle boolean
-function SetThisScriptCanBePaused(toggle) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x57FFF03E423A4C0B)
+---@param player any
+function SetSuperJumpThisFrame(player) end
+
+--- Refer to [`SET_WEATHER_TYPE_NOW`](#0x29B487C359E19889) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xED712CA327900C8A)
+---@param weatherType string
+function SetWeatherTypeNowPersist(weatherType) end
+
+--- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x704983DF373B198F)
+---@param weatherType string
+function SetWeatherTypePersist(weatherType) end
 
 --- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xFB5045B7C42B75BF)
 ---@param weatherType string
 ---@param time number
 function SetWeatherTypeOvertimePersist(weatherType,time) end
-
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xED712CA327900C8A)
----@param weatherType string
-function SetWeatherTypeNowPersist(weatherType) end
-
---- ```
---- Sets the the raw wind speed value.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xAC3A74E8384A9919)
----@param speed number
-function SetWind(speed) end
-
---- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x704983DF373B198F)
----@param weatherType string
-function SetWeatherTypePersist(weatherType) end
 
 --- Refer to [`SET_WEATHER_TYPE_NOW_PERSIST`](#\_0xED712CA327900C8A) for weather types.
 --- 
@@ -2426,16 +2447,19 @@ function SetWeatherTypePersist(weatherType) end
 ---@param percentWeather2 number
 function SetWeatherTypeTransition(weatherType1,weatherType2,percentWeather2) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x8B05F884CF7E8020)
-function SetRandomWeatherType() end
+--- ```
+--- Using this native will clamp the wind speed value to a range of 0.0- 12.0. Using SET_WIND sets the same value but without the restriction.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xEE09ECEDBABE47FC)
+---@param speed number
+function SetWindSpeed(speed) end
 
 --- Sets the wind direction.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xEB0F4468467B4528)
 ---@param direction number
 function SetWindDirection(direction) end
 
---- This native does not have an official description.
+--- Shoots a bullet from the first vector to the second vector. The weapon used as weaponHash should already be loaded via REQUEST_WEAPON_ASSET, otherwise the bullet may fail to materialise.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x867654CBC7606F2C)
 ---@param x1 number
 ---@param y1 number
@@ -2444,37 +2468,13 @@ function SetWindDirection(direction) end
 ---@param y2 number
 ---@param z2 number
 ---@param damage number
----@param p7 boolean
+---@param pureAccuracy boolean
 ---@param weaponHash any
 ---@param ownerPed number
 ---@param isAudible boolean
 ---@param isInvisible boolean
 ---@param speed number
-function ShootSingleBulletBetweenCoords(x1,y1,z1,x2,y2,z2,damage,p7,weaponHash,ownerPed,isAudible,isInvisible,speed) end
-
---- ```
---- entity - entity to ignore  
---- ```
---- 
---- ```
---- NativeDB Added Parameter 15: Any p14
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xE3A7742E0B7A2F8B)
----@param x1 number
----@param y1 number
----@param z1 number
----@param x2 number
----@param y2 number
----@param z2 number
----@param damage number
----@param p7 boolean
----@param weaponHash any
----@param ownerPed number
----@param isAudible boolean
----@param isInvisible boolean
----@param speed number
----@param entity number
-function ShootSingleBulletBetweenCoordsIgnoreEntity(x1,y1,z1,x2,y2,z2,damage,p7,weaponHash,ownerPed,isAudible,isInvisible,speed,entity) end
+function ShootSingleBulletBetweenCoords(x1,y1,z1,x2,y2,z2,damage,pureAccuracy,weaponHash,ownerPed,isAudible,isInvisible,speed) end
 
 --- ```
 --- NativeDB Added Parameter 19: Any p18
@@ -2502,17 +2502,34 @@ function ShootSingleBulletBetweenCoordsIgnoreEntity(x1,y1,z1,x2,y2,z2,damage,p7,
 ---@param p17 boolean
 function ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1,y1,z1,x2,y2,z2,damage,p7,weaponHash,ownerPed,isAudible,isInvisible,speed,entity,p14,p15,p16,p17) end
 
---- ```
---- Using this native will clamp the wind speed value to a range of 0.0- 12.0. Using SET_WIND sets the same value but without the restriction.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xEE09ECEDBABE47FC)
----@param speed number
-function SetWindSpeed(speed) end
-
 --- Returns true if the game is using the metric measurement system (profile setting 227), false if imperial is used.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xD3D15555431AB793)
 ---@return boolean
 function ShouldUseMetricMeasurements() end
+
+--- ```
+--- entity - entity to ignore  
+--- ```
+--- 
+--- ```
+--- NativeDB Added Parameter 15: Any p14
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xE3A7742E0B7A2F8B)
+---@param x1 number
+---@param y1 number
+---@param z1 number
+---@param x2 number
+---@param y2 number
+---@param z2 number
+---@param damage number
+---@param p7 boolean
+---@param weaponHash any
+---@param ownerPed number
+---@param isAudible boolean
+---@param isInvisible boolean
+---@param speed number
+---@param entity number
+function ShootSingleBulletBetweenCoordsIgnoreEntity(x1,y1,z1,x2,y2,z2,damage,p7,weaponHash,ownerPed,isAudible,isInvisible,speed,entity) end
 
 --- This native always come right before SET_ENTITY_QUATERNION where its final 4 parameters are SLERP_NEAR_QUATERNION p9 to p12
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xF2F6A2FA49278625)
@@ -2531,6 +2548,13 @@ function ShouldUseMetricMeasurements() end
 ---@param outW number
 function SlerpNearQuaternion(t,x,y,z,w,x1,y1,z1,w1,outX,outY,outZ,outW) end
 
+--- ```
+--- Sets the the raw wind speed value.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xAC3A74E8384A9919)
+---@param speed number
+function SetWind(speed) end
+
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA9575F812C6A7997)
 ---@param p0 any
@@ -2544,6 +2568,12 @@ function StartSaveData(p0,p1,p2) end
 ---@param size number
 ---@param arrayName string
 function StartSaveArrayWithSize(p0,size,arrayName) end
+
+--- ```
+--- Begins with STOP_*. Next character in the name is either D or E.
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xC7DB36C24634F52B)
+function StopBenchmarkRecording() end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xBF737600CDDBEADD)
@@ -2559,24 +2589,16 @@ function StartSaveStructWithSize(p0,size,structName) end
 function StartBenchmarkRecording() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x04456F95153C6BE4)
-function StopSaveArray() end
-
---- ```
---- Begins with STOP_*. Next character in the name is either D or E.
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xC7DB36C24634F52B)
-function StopBenchmarkRecording() end
-
---- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xEB1774DF12BB9F12)
 function StopSaveStruct() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x632106CC96E82E91)
----@param p0 number
----@return number
-function Tan(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x74E20C9145FB66FD)
+function StopSaveData() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x04456F95153C6BE4)
+function StopSaveArray() end
 
 --- ```
 --- Returns false if it's a null or empty string or if the string is too long. outInteger will be set to -999 in that case.  
@@ -2587,6 +2609,12 @@ function Tan(p0) end
 ---@param outInteger number
 ---@return boolean
 function StringToInt(string,outInteger) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x632106CC96E82E91)
+---@param p0 number
+---@return number
+function Tan(p0) end
 
 --- ```
 --- For a full list, see here: pastebin.com/yLNWicUi  
@@ -2613,11 +2641,6 @@ function UiIsSingleplayerPauseMenuActive() end
 ---@param p1 number
 function UnloadCloudHat(name,p1) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF14878FC50BEC6EE)
----@param toggle boolean
-function UsingMissionCreator(toggle) end
-
 --- ```
 --- Returns the current status of the onscreen keyboard, and updates the output.
 --- Status Codes:
@@ -2631,33 +2654,19 @@ function UsingMissionCreator(toggle) end
 function UpdateOnscreenKeyboard() end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xC3C221ADDDE31A11)
----@param p0 number
-function WaterOverrideFadeOut(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x405591EC8FD9096D)
----@param amplitude number
-function WaterOverrideSetOceanwaveamplitude(amplitude) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x31727907B2C43C55)
----@param minAmplitude number
-function WaterOverrideSetOceannoiseminamplitude(minAmplitude) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x74E20C9145FB66FD)
-function StopSaveData() end
-
---- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA8434F1DFF41D6E7)
 ---@param p0 number
 function WaterOverrideFadeIn(p0) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB3E6360DDE733E82)
----@param maxAmplitude number
-function WaterOverrideSetOceanwavemaxamplitude(maxAmplitude) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xC3C221ADDDE31A11)
+---@param p0 number
+function WaterOverrideFadeOut(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF14878FC50BEC6EE)
+---@param toggle boolean
+function UsingMissionCreator(toggle) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xF751B16FB32ABC1D)
@@ -2665,19 +2674,29 @@ function WaterOverrideSetOceanwavemaxamplitude(maxAmplitude) end
 function WaterOverrideSetOceanwaveminamplitude(minAmplitude) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x31727907B2C43C55)
+---@param minAmplitude number
+function WaterOverrideSetOceannoiseminamplitude(minAmplitude) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB9854DFDE0D833D6)
+---@param disturb number
+function WaterOverrideSetRippledisturb(disturb) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x405591EC8FD9096D)
+---@param amplitude number
+function WaterOverrideSetOceanwaveamplitude(amplitude) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB3E6360DDE733E82)
+---@param maxAmplitude number
+function WaterOverrideSetOceanwavemaxamplitude(maxAmplitude) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x9F5E6BB6B34540DA)
 ---@param maxBumpiness number
 function WaterOverrideSetRipplemaxbumpiness(maxBumpiness) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x7C9C0B1EEB1F9072)
----@param bumpiness number
-function WaterOverrideSetRipplebumpiness(bumpiness) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB8F87EAD7533B176)
----@param amplitude number
-function WaterOverrideSetShorewaveamplitude(amplitude) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x6216B116083A7CB4)
@@ -2685,9 +2704,19 @@ function WaterOverrideSetShorewaveamplitude(amplitude) end
 function WaterOverrideSetRippleminbumpiness(minBumpiness) end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xC3EAD29AB273ECE8)
+---@param minAmplitude number
+function WaterOverrideSetShorewaveminamplitude(minAmplitude) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xA7A1127490312C36)
 ---@param maxAmplitude number
 function WaterOverrideSetShorewavemaxamplitude(maxAmplitude) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB8F87EAD7533B176)
+---@param amplitude number
+function WaterOverrideSetShorewaveamplitude(amplitude) end
 
 --- ```
 --- This seems to edit the water wave, intensity around your current location.  
@@ -2700,11 +2729,6 @@ function WaterOverrideSetShorewavemaxamplitude(maxAmplitude) end
 function WaterOverrideSetStrength(strength) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB9854DFDE0D833D6)
----@param disturb number
-function WaterOverrideSetRippledisturb(disturb) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xC3EAD29AB273ECE8)
----@param minAmplitude number
-function WaterOverrideSetShorewaveminamplitude(minAmplitude) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x7C9C0B1EEB1F9072)
+---@param bumpiness number
+function WaterOverrideSetRipplebumpiness(bumpiness) end

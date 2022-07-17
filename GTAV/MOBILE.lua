@@ -8,18 +8,26 @@
 function CanPhoneBeSeenOnScreen() end
 
 --- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xD6ADE981781FCA09)
+---@param p0 number
+function CellCamSetHeadPitch(p0) end
+
+--- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0xFDE8F069C542D126)
 ---@param p0 boolean
 ---@param p1 boolean
 function CellCamActivate(p0,p1) end
 
---- ```
---- if the bool "Toggle" is "true" so the phone is lean.  
---- if the bool "Toggle" is "false" so the phone is not lean.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0x44E44169EF70138E)
----@param toggle boolean
-function CellCamSetLean(toggle) end
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x439E9BC95B7E7FBE)
+---@param entity number
+---@return boolean
+function CellCamIsCharVisibleNoFaceCheck(entity) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x53F4892D18EC90A4)
+---@param p0 number
+function CellCamSetDistance(p0) end
 
 --- ```
 --- For move the finger of player, the value of int goes 1 at 5.  
@@ -27,6 +35,11 @@ function CellCamSetLean(toggle) end
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x95C9E72F3D7DEC9B)
 ---@param direction number
 function CellCamMoveFinger(direction) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x1B0B4AEED5B9B41C)
+---@param p0 number
+function CellCamSetHorizontalOffset(p0) end
 
 --- ```
 --- Disables the phone up-button, oddly enough.   
@@ -40,21 +53,33 @@ function CellCamMoveFinger(direction) end
 function CellCamDisableThisFrame(toggle) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x439E9BC95B7E7FBE)
----@param entity number
----@return boolean
-function CellCamIsCharVisibleNoFaceCheck(entity) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x15E69E2802C24B8D)
+---@param p0 number
+function CellCamSetRoll(p0) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x584FDFDA48805B86)
----@param position vector3
-function GetMobilePhonePosition(position) end
+--- ```
+--- if the bool "Toggle" is "true" so the phone is lean.  
+--- if the bool "Toggle" is "false" so the phone is not lean.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x44E44169EF70138E)
+---@param toggle boolean
+function CellCamSetLean(toggle) end
 
 --- ```
 --- Destroys the currently active mobile phone.  
 --- ```
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x3BC861DF703E5097)
 function DestroyMobilePhone() end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x466DA42C89865553)
+---@param p0 number
+function CellCamSetHeadHeight(p0) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x3117D84EFA60F77B)
+---@param p0 number
+function CellCamSetVerticalOffset(p0) end
 
 --- ```
 --- Creates a mobile phone of the specified type.  
@@ -70,9 +95,9 @@ function DestroyMobilePhone() end
 function CreateMobilePhone(phoneType) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xB4A53E05F68B6FA1)
----@param renderId number
-function GetMobilePhoneRenderId(renderId) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x584FDFDA48805B86)
+---@param position vector3
+function GetMobilePhonePosition(position) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x1CEFB61F193070AE)
@@ -81,29 +106,14 @@ function GetMobilePhoneRenderId(renderId) end
 function GetMobilePhoneRotation(rotation,p1) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x15E69E2802C24B8D)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF1E22DC13F5EEBAD)
 ---@param p0 number
-function N_0x15e69e2802c24b8d(p0) end
+function CellCamSetHeadRoll(p0) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x1B0B4AEED5B9B41C)
----@param p0 number
-function N_0x1b0b4aeed5b9b41c(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x3117D84EFA60F77B)
----@param p0 number
-function N_0x3117d84efa60f77b(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x466DA42C89865553)
----@param p0 number
-function N_0x466da42c89865553(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x53F4892D18EC90A4)
----@param p0 number
-function N_0x53f4892d18ec90a4(p0) end
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xB4A53E05F68B6FA1)
+---@param renderId number
+function GetMobilePhoneRenderId(renderId) end
 
 --- ```
 --- Needs more research. If the "phone_cam12" filter is applied, this function is called with "TRUE"; otherwise, "FALSE".
@@ -122,26 +132,6 @@ function N_0x53f4892d18ec90a4(p0) end
 ---@param toggle number
 function N_0xa2ccbe62cd4c91a4(toggle) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF1E22DC13F5EEBAD)
----@param p0 number
-function N_0xf1e22dc13f5eebad(p0) end
-
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0x693A5C6D6734085B)
----@param posX number
----@param posY number
----@param posZ number
-function SetMobilePhonePosition(posX,posY,posZ) end
-
---- ```
---- If bool Toggle = true so the mobile is hide to screen.  
---- If bool Toggle = false so the mobile is show to screen.  
---- ```
---- [Native Documentation](https://docs.fivem.net/natives/?_0xF511F759238A5122)
----@param toggle boolean
-function ScriptIsMovingMobilePhoneOffscreen(toggle) end
-
 --- ```
 --- Last parameter is unknown and always zero.  
 --- ```
@@ -152,10 +142,13 @@ function ScriptIsMovingMobilePhoneOffscreen(toggle) end
 ---@param p3 any
 function SetMobilePhoneRotation(rotX,rotY,rotZ,p3) end
 
---- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xAC2890471901861C)
----@param p0 number
-function N_0xac2890471901861c(p0) end
+--- ```
+--- If bool Toggle = true so the mobile is hide to screen.  
+--- If bool Toggle = false so the mobile is show to screen.  
+--- ```
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xF511F759238A5122)
+---@param toggle boolean
+function ScriptIsMovingMobilePhoneOffscreen(toggle) end
 
 --- ```
 --- The minimum/default is 500.0f. If you plan to make it bigger set it's position as well. Also this seems to need to be called in a loop as when you close the phone the scale is reset. If not in a loop you'd need to call it everytime before you re-open the phone.  
@@ -165,11 +158,18 @@ function N_0xac2890471901861c(p0) end
 function SetMobilePhoneScale(scale) end
 
 --- This native does not have an official description.
---- [Native Documentation](https://docs.fivem.net/natives/?_0xD6ADE981781FCA09)
+--- [Native Documentation](https://docs.fivem.net/natives/?_0xAC2890471901861C)
 ---@param p0 number
-function N_0xd6ade981781fca09(p0) end
+function N_0xac2890471901861c(p0) end
 
 --- This native does not have an official description.
 --- [Native Documentation](https://docs.fivem.net/natives/?_0x375A706A5C2FD084)
 ---@param toggle boolean
 function SetMobilePhoneUnk(toggle) end
+
+--- This native does not have an official description.
+--- [Native Documentation](https://docs.fivem.net/natives/?_0x693A5C6D6734085B)
+---@param posX number
+---@param posY number
+---@param posZ number
+function SetMobilePhonePosition(posX,posY,posZ) end
